@@ -24,7 +24,8 @@
 		2E4522162060EB1D00A6C71D /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220A2060EB1D00A6C71D /* BaseVC.m */; };
 		2E4522172060EB1D00A6C71D /* TLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */; };
 		2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */; };
-		2E45222C2060F19F00A6C71D /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45222B2060F19F00A6C71D /* A.m */; };
+		2E4522302060F47600A6C71D /* BugKitShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */; };
+		2E4522332060F4C700A6C71D /* BugkitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */; };
 		838A782F9FBB36D0EEAF704B /* libPods-BugKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +73,11 @@
 		2E45220A2060EB1D00A6C71D /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarViewController.m; sourceTree = "<group>"; };
 		2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLNavigationViewController.m; sourceTree = "<group>"; };
-		2E45222A2060F19F00A6C71D /* A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
-		2E45222B2060F19F00A6C71D /* A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		2E45222D2060F44000A6C71D /* Bugkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bugkit.h; sourceTree = "<group>"; };
+		2E45222E2060F47600A6C71D /* BugKitShakeWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKitShakeWindow.h; sourceTree = "<group>"; };
+		2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitShakeWindow.m; sourceTree = "<group>"; };
+		2E4522312060F4C700A6C71D /* BugkitListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugkitListTableViewController.h; sourceTree = "<group>"; };
+		2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugkitListTableViewController.m; sourceTree = "<group>"; };
 		635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,8 +209,11 @@
 		2E4522192060EB2500A6C71D /* BugKit */ = {
 			isa = PBXGroup;
 			children = (
-				2E45222A2060F19F00A6C71D /* A.h */,
-				2E45222B2060F19F00A6C71D /* A.m */,
+				2E45222D2060F44000A6C71D /* Bugkit.h */,
+				2E45222E2060F47600A6C71D /* BugKitShakeWindow.h */,
+				2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */,
+				2E4522312060F4C700A6C71D /* BugkitListTableViewController.h */,
+				2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */,
 			);
 			path = BugKit;
 			sourceTree = SOURCE_ROOT;
@@ -390,13 +397,14 @@
 				2E4522152060EB1D00A6C71D /* AppDelegate.m in Sources */,
 				2E4522172060EB1D00A6C71D /* TLTabBarViewController.m in Sources */,
 				2E4522162060EB1D00A6C71D /* BaseVC.m in Sources */,
+				2E4522332060F4C700A6C71D /* BugkitListTableViewController.m in Sources */,
+				2E4522302060F47600A6C71D /* BugKitShakeWindow.m in Sources */,
 				2E4522102060EB1D00A6C71D /* MeVC.m in Sources */,
 				2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */,
 				2E4521CF2060EA6500A6C71D /* main.m in Sources */,
 				2E45220E2060EB1D00A6C71D /* LujhBaseUrlManager.m in Sources */,
 				2E4522132060EB1D00A6C71D /* TLTerminalInfo.m in Sources */,
 				2E4522112060EB1D00A6C71D /* HomeVC.m in Sources */,
-				2E45222C2060F19F00A6C71D /* A.m in Sources */,
 				2E45220F2060EB1D00A6C71D /* LujhNetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

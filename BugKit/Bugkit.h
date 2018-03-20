@@ -1,13 +1,13 @@
 //
-//  A.h
+//  Bugkit.h
 //  BugKitExample
 //
 //  Created by lujh on 2018/3/20.
 //  Copyright © 2018年 lujh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef Bugkit_h
+#define Bugkit_h
 
-@interface A : NSObject
 
-@end
+#endif /* Bugkit_h */
