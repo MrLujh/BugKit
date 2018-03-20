@@ -26,6 +26,8 @@
 		2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */; };
 		2E4522302060F47600A6C71D /* BugKitShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */; };
 		2E4522332060F4C700A6C71D /* BugkitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */; };
+		2E4522362060F70700A6C71D /* BugKitSwitchBaseUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522352060F70700A6C71D /* BugKitSwitchBaseUrlController.m */; };
+		2E4522392060F79A00A6C71D /* BugKitAppDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522382060F79A00A6C71D /* BugKitAppDownloadController.m */; };
 		838A782F9FBB36D0EEAF704B /* libPods-BugKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,10 @@
 		2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitShakeWindow.m; sourceTree = "<group>"; };
 		2E4522312060F4C700A6C71D /* BugkitListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugkitListTableViewController.h; sourceTree = "<group>"; };
 		2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugkitListTableViewController.m; sourceTree = "<group>"; };
+		2E4522342060F70700A6C71D /* BugKitSwitchBaseUrlController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKitSwitchBaseUrlController.h; sourceTree = "<group>"; };
+		2E4522352060F70700A6C71D /* BugKitSwitchBaseUrlController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitSwitchBaseUrlController.m; sourceTree = "<group>"; };
+		2E4522372060F79A00A6C71D /* BugKitAppDownloadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKitAppDownloadController.h; sourceTree = "<group>"; };
+		2E4522382060F79A00A6C71D /* BugKitAppDownloadController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitAppDownloadController.m; sourceTree = "<group>"; };
 		635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				2E4522022060EB1D00A6C71D /* AppDelegate.h */,
-				2E4522032060EB1D00A6C71D /* AppDelegate+ThirdService.m */,
-				2E4522042060EB1D00A6C71D /* AppDelegate+ThirdService.h */,
 				2E4522052060EB1D00A6C71D /* AppDelegate.m */,
+				2E4522042060EB1D00A6C71D /* AppDelegate+ThirdService.h */,
+				2E4522032060EB1D00A6C71D /* AppDelegate+ThirdService.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -214,6 +220,10 @@
 				2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */,
 				2E4522312060F4C700A6C71D /* BugkitListTableViewController.h */,
 				2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */,
+				2E4522342060F70700A6C71D /* BugKitSwitchBaseUrlController.h */,
+				2E4522352060F70700A6C71D /* BugKitSwitchBaseUrlController.m */,
+				2E4522372060F79A00A6C71D /* BugKitAppDownloadController.h */,
+				2E4522382060F79A00A6C71D /* BugKitAppDownloadController.m */,
 			);
 			path = BugKit;
 			sourceTree = SOURCE_ROOT;
@@ -392,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4522362060F70700A6C71D /* BugKitSwitchBaseUrlController.m in Sources */,
 				2E4522142060EB1D00A6C71D /* AppDelegate+ThirdService.m in Sources */,
 				2E4522122060EB1D00A6C71D /* TestVC.m in Sources */,
 				2E4522152060EB1D00A6C71D /* AppDelegate.m in Sources */,
@@ -402,6 +413,7 @@
 				2E4522102060EB1D00A6C71D /* MeVC.m in Sources */,
 				2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */,
 				2E4521CF2060EA6500A6C71D /* main.m in Sources */,
+				2E4522392060F79A00A6C71D /* BugKitAppDownloadController.m in Sources */,
 				2E45220E2060EB1D00A6C71D /* LujhBaseUrlManager.m in Sources */,
 				2E4522132060EB1D00A6C71D /* TLTerminalInfo.m in Sources */,
 				2E4522112060EB1D00A6C71D /* HomeVC.m in Sources */,

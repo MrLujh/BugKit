@@ -18,7 +18,7 @@
 
 -(void)initShakeWindow
 {
-    Class class = NSClassFromString(@"DebugShakeWindow");
+    Class class = NSClassFromString(@"BugKitShakeWindow");
     self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 }
 
