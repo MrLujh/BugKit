@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name        = 'BugKit'
 s.version     = '0.0.1'
-s.authors     = { 'daniulaolu' => '287929070@qq.com' }
-s.homepage    = 'https://github.com/daniulaolu/BugKit'
+s.authors     = { 'MrLujh' => '287929070@qq.com' }
+s.homepage    = 'https://github.com/MrLujh/BugKit'
 s.summary     = 'a dropdown menu for ios like wechat homepage.'
-s.source      = { :git => 'https://github.com/daniulaolu/BugKit.git',
+s.source      = { :git => 'https://github.com/MrLujh/BugKit.git',
 :tag => s.version.to_s }
 s.license     = { :type => "MIT", :file => "LICENSE" }
 
