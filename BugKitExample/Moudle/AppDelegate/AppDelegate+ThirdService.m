@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate+ThirdService.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "CocoaLumberjack/CocoaLumberjack.h"
 
 @implementation AppDelegate (ThirdService)
 

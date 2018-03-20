@@ -7,8 +7,7 @@
 //
 
 #import "BugKitLogInfoViewController.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
-
+#import "CocoaLumberjack/CocoaLumberjack.h"
 @interface BugKitLogInfoViewController ()
 /** textView */
 @property (nonatomic,strong) UITextView *textView;
