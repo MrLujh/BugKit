@@ -24,11 +24,7 @@
 		2E4522162060EB1D00A6C71D /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220A2060EB1D00A6C71D /* BaseVC.m */; };
 		2E4522172060EB1D00A6C71D /* TLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */; };
 		2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */; };
-		2E4522232060EB2500A6C71D /* DebugListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45221C2060EB2500A6C71D /* DebugListTableViewController.m */; };
-		2E4522242060EB2500A6C71D /* DebugAppDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45221E2060EB2500A6C71D /* DebugAppDownloadController.m */; };
-		2E4522252060EB2500A6C71D /* DebugShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45221F2060EB2500A6C71D /* DebugShakeWindow.m */; };
-		2E4522262060EB2500A6C71D /* DebugSwitchBaseUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522202060EB2500A6C71D /* DebugSwitchBaseUrlController.m */; };
-		2E4522292060F00000A6C71D /* AppInstallerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522282060F00000A6C71D /* AppInstallerViewController.m */; };
+		2E45222C2060F19F00A6C71D /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45222B2060F19F00A6C71D /* A.m */; };
 		838A782F9FBB36D0EEAF704B /* libPods-BugKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */; };
 /* End PBXBuildFile section */
 
@@ -76,17 +72,8 @@
 		2E45220A2060EB1D00A6C71D /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarViewController.m; sourceTree = "<group>"; };
 		2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLNavigationViewController.m; sourceTree = "<group>"; };
-		2E45221A2060EB2500A6C71D /* DebugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugKit.h; sourceTree = "<group>"; };
-		2E45221B2060EB2500A6C71D /* DebugShakeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugShakeWindow.h; sourceTree = "<group>"; };
-		2E45221C2060EB2500A6C71D /* DebugListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugListTableViewController.m; sourceTree = "<group>"; };
-		2E45221D2060EB2500A6C71D /* DebugSwitchBaseUrlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugSwitchBaseUrlController.h; sourceTree = "<group>"; };
-		2E45221E2060EB2500A6C71D /* DebugAppDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugAppDownloadController.m; sourceTree = "<group>"; };
-		2E45221F2060EB2500A6C71D /* DebugShakeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugShakeWindow.m; sourceTree = "<group>"; };
-		2E4522202060EB2500A6C71D /* DebugSwitchBaseUrlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugSwitchBaseUrlController.m; sourceTree = "<group>"; };
-		2E4522212060EB2500A6C71D /* DebugListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugListTableViewController.h; sourceTree = "<group>"; };
-		2E4522222060EB2500A6C71D /* DebugAppDownloadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugAppDownloadController.h; sourceTree = "<group>"; };
-		2E4522272060F00000A6C71D /* AppInstallerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInstallerViewController.h; sourceTree = "<group>"; };
-		2E4522282060F00000A6C71D /* AppInstallerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInstallerViewController.m; sourceTree = "<group>"; };
+		2E45222A2060F19F00A6C71D /* A.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		2E45222B2060F19F00A6C71D /* A.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
 		635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,17 +205,8 @@
 		2E4522192060EB2500A6C71D /* BugKit */ = {
 			isa = PBXGroup;
 			children = (
-				2E45221A2060EB2500A6C71D /* DebugKit.h */,
-				2E45221B2060EB2500A6C71D /* DebugShakeWindow.h */,
-				2E45221F2060EB2500A6C71D /* DebugShakeWindow.m */,
-				2E4522212060EB2500A6C71D /* DebugListTableViewController.h */,
-				2E45221C2060EB2500A6C71D /* DebugListTableViewController.m */,
-				2E45221D2060EB2500A6C71D /* DebugSwitchBaseUrlController.h */,
-				2E4522202060EB2500A6C71D /* DebugSwitchBaseUrlController.m */,
-				2E4522222060EB2500A6C71D /* DebugAppDownloadController.h */,
-				2E45221E2060EB2500A6C71D /* DebugAppDownloadController.m */,
-				2E4522272060F00000A6C71D /* AppInstallerViewController.h */,
-				2E4522282060F00000A6C71D /* AppInstallerViewController.m */,
+				2E45222A2060F19F00A6C71D /* A.h */,
+				2E45222B2060F19F00A6C71D /* A.m */,
 			);
 			path = BugKit;
 			sourceTree = SOURCE_ROOT;
@@ -408,22 +386,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E4522142060EB1D00A6C71D /* AppDelegate+ThirdService.m in Sources */,
-				2E4522292060F00000A6C71D /* AppInstallerViewController.m in Sources */,
 				2E4522122060EB1D00A6C71D /* TestVC.m in Sources */,
 				2E4522152060EB1D00A6C71D /* AppDelegate.m in Sources */,
 				2E4522172060EB1D00A6C71D /* TLTabBarViewController.m in Sources */,
-				2E4522262060EB2500A6C71D /* DebugSwitchBaseUrlController.m in Sources */,
-				2E4522232060EB2500A6C71D /* DebugListTableViewController.m in Sources */,
 				2E4522162060EB1D00A6C71D /* BaseVC.m in Sources */,
 				2E4522102060EB1D00A6C71D /* MeVC.m in Sources */,
 				2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */,
 				2E4521CF2060EA6500A6C71D /* main.m in Sources */,
 				2E45220E2060EB1D00A6C71D /* LujhBaseUrlManager.m in Sources */,
 				2E4522132060EB1D00A6C71D /* TLTerminalInfo.m in Sources */,
-				2E4522252060EB2500A6C71D /* DebugShakeWindow.m in Sources */,
 				2E4522112060EB1D00A6C71D /* HomeVC.m in Sources */,
+				2E45222C2060F19F00A6C71D /* A.m in Sources */,
 				2E45220F2060EB1D00A6C71D /* LujhNetWorkManager.m in Sources */,
-				2E4522242060EB2500A6C71D /* DebugAppDownloadController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
