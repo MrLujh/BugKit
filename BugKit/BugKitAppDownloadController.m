@@ -7,13 +7,8 @@
 //
 
 #import "BugKitAppDownloadController.h"
-#import <WebKit/WebKit.h>
 
 @interface BugKitAppDownloadController ()
-/** webView */
-@property (nonatomic,strong) WKWebView * webView;
-/** installBtn */
-@property (nonatomic,strong) UIButton * installBtn;
 /** dataSource */
 @property (nonatomic,strong) NSMutableDictionary *dataSource;
 @end
@@ -22,15 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self creatDataSoure];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    // 解析文件数据
+    [self parseFileData];
     
-    [self checkPGY];
+    // 蒲谷英平台数据请求
+    [self requestNetworkPGY];
 }
 
--(void)creatDataSoure
+#pragma mark -解析文件数据
+
+-(void)parseFileData
 {
     NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
     NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
@@ -39,7 +37,9 @@
     self.dataSource = dic.mutableCopy;
 }
 
-- (void)checkPGY
+#pragma mark -蒲谷英平台数据请求
+
+- (void)requestNetworkPGY
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/builds"]];
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
@@ -65,6 +65,7 @@
             else
             {
                 UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"下载最新版本" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    
                     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/install?_api_key=%@&buildKey=%@",self.dataSource[@"api_key"],buildKey]]];
                     
                 }];

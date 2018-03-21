@@ -25,20 +25,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"切换BaseUrl";
     
-    [self creatDataSoure];
+    // 解析文件数据
+    [self parseFileData];
+    
     [self.view addSubview:self.tableView];
     
 }
 
-- (void)back {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
+#pragma mark -解析文件数据
 
-
--(void)creatDataSoure
+-(void)parseFileData
 {
     NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
     NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
@@ -53,7 +51,8 @@
     return nil;
 }
 
-#pragma mark - tableView
+#pragma mark -UITableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [self.dataSource count];
@@ -112,6 +111,8 @@
     return cell;
 }
 
+#pragma mark -UITableViewDelegate
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
@@ -161,6 +162,10 @@
     }
     
     return _tableView;
+}
+
+- (void)back {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)dealloc {
