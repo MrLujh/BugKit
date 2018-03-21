@@ -13,4 +13,5 @@ s.requires_arc = true
 s.source_files = 'BugKit/**/*.{h,m}'
 s.ios.deployment_target = '7.0'
 s.dependency 'FLEX'
+s.dependency 'CocoaLumberjack'
 end
