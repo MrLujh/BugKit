@@ -55,7 +55,7 @@
 
 * 蒲谷英API 2.0文档说明链接如下:
 
-          https://www.pgyer.com/doc/view/api#paramInfo
+    https://www.pgyer.com/doc/view/api#paramInfo
    
 ### 1.检查Fastlane是否正确安装。输入以下命令：
 
