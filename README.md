@@ -1,12 +1,5 @@
 ## BugKit
-* 自动化打包，通过fastlane自动发布
-
-![Mou icon](https://github.com/daniulaolu/Fastlane--Packaging/blob/master/packaging.gif)
-
-
-## Fastlane安装不在这里详细罗列，参照一下链接流程
-*  https://www.jianshu.com/p/0a113f754c09
-
+* App内置测试工具--摇一摇切换基础IP和蒲谷英下载APP
 
 
 ## 操作步骤
