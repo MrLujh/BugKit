@@ -53,7 +53,10 @@
 
   ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
 
+* 蒲谷英API 2.0文档说明链接如下
 
+   https://www.pgyer.com/doc/view/api#paramInfo
+   
 ### 1.检查Fastlane是否正确安装。输入以下命令：
 
 ```objc
