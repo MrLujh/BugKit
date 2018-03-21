@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'BugKit'
-s.version     = '3.0.1'
+s.version     = '3.0.2'
 s.authors     = { 'MrLujh' => '287929070@qq.com' }
 s.homepage    = 'https://github.com/MrLujh/BugKit'
 s.summary     = 'a dropdown menu for ios like wechat homepage.'
