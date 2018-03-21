@@ -131,6 +131,10 @@
 
 @end
 ```
+* 更重要的一步是项目中TARGETS 要copy一个新的targets，其作用是copy的那个是用来打包上架App Store，另外一个开放给测试打包
+![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/network_01.png)
+![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/network_02.png)
+![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/network_03.png)
 * 导入bugkit之后 库的头文件不需要引入，在APPdelegate
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {}方法中调入
