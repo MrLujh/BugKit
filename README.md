@@ -49,9 +49,9 @@
 }
 ```
 
-* 蒲谷英历史版本查看URL
+* 蒲谷英历史版本查看URL配置参数如下
 
-* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
+  ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
 
 
 ### 1.检查Fastlane是否正确安装。输入以下命令：
