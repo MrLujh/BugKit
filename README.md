@@ -8,9 +8,9 @@
 
 ## 项目中数据配置设置
 
-*  为内置测试工具提供公开配置入口
+* 为内置测试工具提供公开配置入口
 
-* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.03.png)
+ ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.03.png)
 
 ```objc
 {
