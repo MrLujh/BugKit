@@ -53,7 +53,7 @@
 
   ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
 
-* 蒲谷英API 2.0文档说明链接如下
+* 蒲谷英API 2.0文档说明链接如下:
 
    https://www.pgyer.com/doc/view/api#paramInfo
    
