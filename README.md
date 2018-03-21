@@ -57,12 +57,22 @@
 
     https://www.pgyer.com/doc/view/api#paramInfo
    
-### 1.检查Fastlane是否正确安装。输入以下命令：
+### 项目中如何使用
+* 导入bugkit之后 库的头文件不需要引入，在APPdelegate
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {}方法中调入
+
+-(void)initShakeWindow
+{
+    Class class = NSClassFromString(@"BugKitShakeWindow");
+    self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+}
+```
 
 ```objc
 fastlane --version
 ```
-      //可以看到Fastlane版本信息，我的是fastlane 2.84.0
+     
       
 ### 2.打开终端，进入你的项目工程的根目录，输入以下命令
 
