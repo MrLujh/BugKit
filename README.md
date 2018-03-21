@@ -8,6 +8,11 @@
 
 ## 项目中数据配置设置
 
+* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
+
+* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.02.png)
+
+* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.03.png)
 ```objc
 {
     "host":[
