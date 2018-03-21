@@ -8,11 +8,10 @@
 
 ## 项目中数据配置设置
 
-* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
-
-* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.02.png)
+*  为内置测试工具提供公开配置入口
 
 * ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.03.png)
+
 ```objc
 {
     "host":[
@@ -50,7 +49,10 @@
 }
 ```
 
-     为内置测试工具提供公开配置入口
+     
+* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
+
+* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.02.png)
 
 ### 1.检查Fastlane是否正确安装。输入以下命令：
 
