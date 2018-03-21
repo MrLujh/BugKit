@@ -1,7 +1,7 @@
 # ☆☆☆ “BugKit” ☆☆☆
 
 ### 支持pod导入
-* pod 'BugKit','~> 3.0.3'
+* pod 'BugKit','~> 3.0.2'
 
 * 如果发现pod search BugKit 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了
 
@@ -52,7 +52,6 @@
      
 * ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.01.png)
 
-* ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.02.png)
 
 ### 1.检查Fastlane是否正确安装。输入以下命令：
 
