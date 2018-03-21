@@ -2,8 +2,46 @@
 * App内置测试工具--摇一摇切换基础IP和蒲谷英下载APP
 
 
-## 操作步骤
+## 项目中数据配置设置
 
+```objc
+{
+    "host":[
+            {
+            "name":"当前环境",
+            "type":"hostBaseTypeNow",
+            "url":""
+            },
+            {
+            "name":"测试环境",
+            "type":"hostBaseTypeTest",
+            "url":"https://119.120.88.640"
+            },
+            {
+            "name":"生产环境",
+            "type":"hostBaseTypeProduct",
+            "url":"https://lujh.com"
+            },
+            {
+            "name":"类环境",
+            "type":"hostBaseTypeStaging",
+            "url":""
+            },
+            {
+            "name":"个人环境",
+            "type":"hostBaseTypePersonal",
+            "url":""
+            }
+            ],
+    "pgyConfig":{
+        "appKey":"332ada3b2e4c856c09acc9796cfc9099",
+        "api_key":"1303c11160b475cc56b9d5df820a17ed",
+        "openUrl":"https://www.pgyer.com/R1mF"
+    }
+}
+```
+
+     为内置测试工具提供公开配置入口
 
 ### 1.检查Fastlane是否正确安装。输入以下命令：
 
