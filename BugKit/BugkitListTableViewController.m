@@ -10,6 +10,7 @@
 #import "BugKitSwitchBaseUrlController.h" // 基础网址切换
 #import "BugKitAppDownloadController.h" // 蒲谷英下载
 #import "FLEXManager.h" // FLEX tools
+#import "BugKitLogInfoViewController.h" // 网络请求日志
 @interface BugkitListTableViewController ()
 /** dataSource */
 @property (nonatomic,strong) NSMutableArray *dataSource;
@@ -63,6 +64,8 @@
             
         case 0:
         {
+            BugKitLogInfoViewController *vc = [[BugKitLogInfoViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
             
         }
             break;
