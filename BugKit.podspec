@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'BugKit'
-s.version     = '2.0.3'
+s.version     = '2.0.4'
 s.authors     = { 'MrLujh' => '287929070@qq.com' }
 s.homepage    = 'https://github.com/MrLujh/BugKit'
 s.summary     = 'a dropdown menu for ios like wechat homepage.'
@@ -12,4 +12,5 @@ s.platform = :ios, '7.0'
 s.requires_arc = true
 s.source_files = 'BugKit/**/*.{h,m}'
 s.ios.deployment_target = '7.0'
+s.dependency 'FLEX'
 end
