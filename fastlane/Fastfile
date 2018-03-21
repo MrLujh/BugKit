@@ -1,0 +1,84 @@
+# 定义打包平台
+default_platform :ios
+
+platform :ios do
+  before_all do
+    git_pull
+    last_git_commit
+    sh "rm -f ./Podfile.lock"
+       cocoapods(use_bundle_exec: false)
+
+end
+
+# 运行所有的测试
+  lane :test do
+    scan
+end
+
+# 提交一个新的Beta版本
+# 确保配置文件是最新的
+lane :beta do
+   
+    gym 
+    pilot 
+end
+
+# 将新版本部署到应用程序商店
+lane :release do
+   
+    gym 
+    deliver(force: true) 
+end
+
+# 以下是发布版本的配置
+#--发布蒲公英上的版本配置
+lane :pgy do
+    
+sigh(
+        app_identifier: "com.bugkit.cn" #项目的bundle identifler
+    )
+
+# 开始打包    
+gym(
+     
+    scheme: “BugKitExample”, #指定项目的scheme名称
+    configuration: "Release", # 指定打包方式，Release 或者 Debug
+    silent: true, # 隐藏没有必要的信息
+    clean: true, # 是否清空以前的编译信息 true：是
+    workspace: "BugKitExample.xcworkspace",
+    include_bitcode: false, #项目中的bitcode 设置
+    output_directory: './pgy', # 指定输出文件夹
+    output_name: "BugKitExample.ipa", #输出的ipa名称
+    export_xcargs: "-allowProvisioningUpdates”, #忽略文件
+    )
+
+# 开始上传蒲公英
+pgyer(api_key: "1303c11160b475cc56b9d5df820a17ed", user_key: "dd705842c35567b3f2620e6a047024f0")
+
+end
+
+#--发布AppStore上的版本配置
+lane :appstore do
+    sigh(
+        app_identifier: "com.bugkit.cn"
+    )
+   
+    gym(
+    scheme: “BugKitExample”,
+    configuration: "Release",
+    silent: true,
+    clean: true,
+    workspace: "BugKitExample.xcworkspace",
+    include_bitcode: false,
+    output_directory: ‘./appstore’,
+    output_name: "BugKitExample.ipa",
+    export_xcargs: "-allowProvisioningUpdates”,
+    )
+    deliver(
+      submit_for_review: false,
+      skip_screenshots: true,
+      skip_metadata: true
+    )
+  end
+
+end

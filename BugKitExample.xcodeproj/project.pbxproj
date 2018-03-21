@@ -18,7 +18,6 @@
 		2E4522102060EB1D00A6C71D /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521F92060EB1D00A6C71D /* MeVC.m */; };
 		2E4522112060EB1D00A6C71D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521FB2060EB1D00A6C71D /* HomeVC.m */; };
 		2E4522122060EB1D00A6C71D /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521FD2060EB1D00A6C71D /* TestVC.m */; };
-		2E4522132060EB1D00A6C71D /* TLTerminalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521FF2060EB1D00A6C71D /* TLTerminalInfo.m */; };
 		2E4522142060EB1D00A6C71D /* AppDelegate+ThirdService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522032060EB1D00A6C71D /* AppDelegate+ThirdService.m */; };
 		2E4522152060EB1D00A6C71D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522052060EB1D00A6C71D /* AppDelegate.m */; };
 		2E4522162060EB1D00A6C71D /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220A2060EB1D00A6C71D /* BaseVC.m */; };
@@ -30,7 +29,30 @@
 		2E4522392060F79A00A6C71D /* BugKitAppDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522382060F79A00A6C71D /* BugKitAppDownloadController.m */; };
 		2E4522BA20610A7A00A6C71D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4522B920610A7A00A6C71D /* MobileCoreServices.framework */; };
 		2E4523612061EF7E00A6C71D /* BugKitLogInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4523602061EF7E00A6C71D /* BugKitLogInfoViewController.m */; };
+		2E45239420622DC500A6C71D /* BugKitSwitchBaseUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522352060F70700A6C71D /* BugKitSwitchBaseUrlController.m */; };
+		2E45239520622DC500A6C71D /* AppDelegate+ThirdService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522032060EB1D00A6C71D /* AppDelegate+ThirdService.m */; };
+		2E45239620622DC500A6C71D /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521FD2060EB1D00A6C71D /* TestVC.m */; };
+		2E45239720622DC500A6C71D /* BugKitLogInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4523602061EF7E00A6C71D /* BugKitLogInfoViewController.m */; };
+		2E45239820622DC500A6C71D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522052060EB1D00A6C71D /* AppDelegate.m */; };
+		2E45239920622DC500A6C71D /* TLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */; };
+		2E45239A20622DC500A6C71D /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220A2060EB1D00A6C71D /* BaseVC.m */; };
+		2E45239B20622DC500A6C71D /* BugkitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522322060F4C700A6C71D /* BugkitListTableViewController.m */; };
+		2E45239C20622DC500A6C71D /* BugKitShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45222F2060F47600A6C71D /* BugKitShakeWindow.m */; };
+		2E45239D20622DC500A6C71D /* MeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521F92060EB1D00A6C71D /* MeVC.m */; };
+		2E45239E20622DC500A6C71D /* TLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */; };
+		2E45239F20622DC500A6C71D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521CE2060EA6500A6C71D /* main.m */; };
+		2E4523A020622DC500A6C71D /* BugKitAppDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4522382060F79A00A6C71D /* BugKitAppDownloadController.m */; };
+		2E4523A120622DC500A6C71D /* LujhBaseUrlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521F42060EB1D00A6C71D /* LujhBaseUrlManager.m */; };
+		2E4523A220622DC500A6C71D /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521FB2060EB1D00A6C71D /* HomeVC.m */; };
+		2E4523A320622DC500A6C71D /* LujhNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4521F52060EB1D00A6C71D /* LujhNetWorkManager.m */; };
+		2E4523A520622DC500A6C71D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4522B920610A7A00A6C71D /* MobileCoreServices.framework */; };
+		2E4523A820622DC500A6C71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4521CA2060EA6500A6C71D /* LaunchScreen.storyboard */; };
+		2E4523A920622DC500A6C71D /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E4521F12060EB1D00A6C71D /* config.json */; };
+		2E4523AA20622DC500A6C71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4521C82060EA6500A6C71D /* Assets.xcassets */; };
+		2E4523AB20622DC500A6C71D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4521C52060EA6500A6C71D /* Main.storyboard */; };
+		2E4523B520622F6700A6C71D /* PhoneInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4523B420622F6700A6C71D /* PhoneInformation.m */; };
 		838A782F9FBB36D0EEAF704B /* libPods-BugKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */; };
+		9951EED06E043A959B5B41F9 /* libPods-BugKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +66,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25FF538F474CC77EAC5C49E9 /* Pods-BugKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		2E4521BC2060EA6500A6C71D /* BugKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4521C62060EA6500A6C71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E4521C82060EA6500A6C71D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,10 +83,8 @@
 		2E4521F92060EB1D00A6C71D /* MeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeVC.m; sourceTree = "<group>"; };
 		2E4521FA2060EB1D00A6C71D /* TestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		2E4521FB2060EB1D00A6C71D /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
-		2E4521FC2060EB1D00A6C71D /* TLTerminalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTerminalInfo.h; sourceTree = "<group>"; };
 		2E4521FD2060EB1D00A6C71D /* TestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		2E4521FE2060EB1D00A6C71D /* MeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeVC.h; sourceTree = "<group>"; };
-		2E4521FF2060EB1D00A6C71D /* TLTerminalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTerminalInfo.m; sourceTree = "<group>"; };
 		2E4522002060EB1D00A6C71D /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		2E4522022060EB1D00A6C71D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2E4522032060EB1D00A6C71D /* AppDelegate+ThirdService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ThirdService.m"; sourceTree = "<group>"; };
@@ -89,8 +108,13 @@
 		2E4522B920610A7A00A6C71D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2E45235F2061EF7E00A6C71D /* BugKitLogInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKitLogInfoViewController.h; sourceTree = "<group>"; };
 		2E4523602061EF7E00A6C71D /* BugKitLogInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitLogInfoViewController.m; sourceTree = "<group>"; };
+		2E4523B120622DC500A6C71D /* BugKitExample copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BugKitExample copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E4523B220622DC500A6C71D /* BugKitExample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "BugKitExample copy-Info.plist"; path = "/Users/lujh/Desktop/BugKit/BugKitExample copy-Info.plist"; sourceTree = "<absolute>"; };
+		2E4523B320622F6700A6C71D /* PhoneInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneInformation.h; sourceTree = "<group>"; };
+		2E4523B420622F6700A6C71D /* PhoneInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneInformation.m; sourceTree = "<group>"; };
 		635E4B980412679DC2C6A5D8 /* libPods-BugKitExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BugKitExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		C3E9ABB7F8EA7F4D10B830C4 /* Pods-BugKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		CC8FE3DB659ABD9881EE6918 /* Pods-BugKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BugKitExample/Pods-BugKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +124,7 @@
 			files = (
 				2E4522BA20610A7A00A6C71D /* MobileCoreServices.framework in Frameworks */,
 				838A782F9FBB36D0EEAF704B /* libPods-BugKitExample.a in Frameworks */,
+				9951EED06E043A959B5B41F9 /* libPods-BugKitExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +132,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E4523A420622DC500A6C71D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E4523A520622DC500A6C71D /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +154,7 @@
 				2E4521BD2060EA6500A6C71D /* Products */,
 				C5C590D99007E40AC1F2CD64 /* Pods */,
 				51BC7637DBABB12BCFEB83B5 /* Frameworks */,
+				2E4523B220622DC500A6C71D /* BugKitExample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +163,7 @@
 			children = (
 				2E4521BC2060EA6500A6C71D /* BugKitExample.app */,
 				2E4521D42060EA6500A6C71D /* BugKitExampleTests.xctest */,
+				2E4523B120622DC500A6C71D /* BugKitExample copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,10 +206,12 @@
 		2E4521F32060EB1D00A6C71D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2E4521F42060EB1D00A6C71D /* LujhBaseUrlManager.m */,
-				2E4521F52060EB1D00A6C71D /* LujhNetWorkManager.m */,
+				2E4523B320622F6700A6C71D /* PhoneInformation.h */,
+				2E4523B420622F6700A6C71D /* PhoneInformation.m */,
 				2E4521F62060EB1D00A6C71D /* LujhBaseUrlManager.h */,
+				2E4521F42060EB1D00A6C71D /* LujhBaseUrlManager.m */,
 				2E4521F72060EB1D00A6C71D /* LujhNetWorkManager.h */,
+				2E4521F52060EB1D00A6C71D /* LujhNetWorkManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -188,8 +225,6 @@
 				2E4521FD2060EB1D00A6C71D /* TestVC.m */,
 				2E4521FE2060EB1D00A6C71D /* MeVC.h */,
 				2E4521F92060EB1D00A6C71D /* MeVC.m */,
-				2E4521FC2060EB1D00A6C71D /* TLTerminalInfo.h */,
-				2E4521FF2060EB1D00A6C71D /* TLTerminalInfo.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -209,10 +244,10 @@
 			isa = PBXGroup;
 			children = (
 				2E4522072060EB1D00A6C71D /* BaseVC.h */,
-				2E4522082060EB1D00A6C71D /* TLTabBarViewController.h */,
-				2E4522092060EB1D00A6C71D /* TLNavigationViewController.h */,
 				2E45220A2060EB1D00A6C71D /* BaseVC.m */,
+				2E4522082060EB1D00A6C71D /* TLTabBarViewController.h */,
 				2E45220B2060EB1D00A6C71D /* TLTabBarViewController.m */,
+				2E4522092060EB1D00A6C71D /* TLNavigationViewController.h */,
 				2E45220C2060EB1D00A6C71D /* TLNavigationViewController.m */,
 			);
 			path = Main;
@@ -248,8 +283,8 @@
 		C5C590D99007E40AC1F2CD64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				25FF538F474CC77EAC5C49E9 /* Pods-BugKitExample.debug.xcconfig */,
-				F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */,
+				CC8FE3DB659ABD9881EE6918 /* Pods-BugKitExample.debug.xcconfig */,
+				C3E9ABB7F8EA7F4D10B830C4 /* Pods-BugKitExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -295,6 +330,23 @@
 			productReference = 2E4521D42060EA6500A6C71D /* BugKitExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2E45239120622DC500A6C71D /* BugKitExample copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E4523AE20622DC500A6C71D /* Build configuration list for PBXNativeTarget "BugKitExample copy" */;
+			buildPhases = (
+				2E45239320622DC500A6C71D /* Sources */,
+				2E4523A420622DC500A6C71D /* Frameworks */,
+				2E4523A720622DC500A6C71D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BugKitExample copy";
+			productName = BugKitExample;
+			productReference = 2E4523B120622DC500A6C71D /* BugKitExample copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -306,12 +358,15 @@
 				TargetAttributes = {
 					2E4521BB2060EA6500A6C71D = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2E4521D32060EA6500A6C71D = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2E4521BB2060EA6500A6C71D;
+					};
+					2E45239120622DC500A6C71D = {
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -330,6 +385,7 @@
 			targets = (
 				2E4521BB2060EA6500A6C71D /* BugKitExample */,
 				2E4521D32060EA6500A6C71D /* BugKitExampleTests */,
+				2E45239120622DC500A6C71D /* BugKitExample copy */,
 			);
 		};
 /* End PBXProject section */
@@ -350,6 +406,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E4523A720622DC500A6C71D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E4523A820622DC500A6C71D /* LaunchScreen.storyboard in Resources */,
+				2E4523A920622DC500A6C71D /* config.json in Resources */,
+				2E4523AA20622DC500A6C71D /* Assets.xcassets in Resources */,
+				2E4523AB20622DC500A6C71D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,11 +488,11 @@
 				2E4522332060F4C700A6C71D /* BugkitListTableViewController.m in Sources */,
 				2E4522302060F47600A6C71D /* BugKitShakeWindow.m in Sources */,
 				2E4522102060EB1D00A6C71D /* MeVC.m in Sources */,
+				2E4523B520622F6700A6C71D /* PhoneInformation.m in Sources */,
 				2E4522182060EB1D00A6C71D /* TLNavigationViewController.m in Sources */,
 				2E4521CF2060EA6500A6C71D /* main.m in Sources */,
 				2E4522392060F79A00A6C71D /* BugKitAppDownloadController.m in Sources */,
 				2E45220E2060EB1D00A6C71D /* LujhBaseUrlManager.m in Sources */,
-				2E4522132060EB1D00A6C71D /* TLTerminalInfo.m in Sources */,
 				2E4522112060EB1D00A6C71D /* HomeVC.m in Sources */,
 				2E45220F2060EB1D00A6C71D /* LujhNetWorkManager.m in Sources */,
 			);
@@ -436,6 +503,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E4521D92060EA6500A6C71D /* BugKitExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E45239320622DC500A6C71D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E45239420622DC500A6C71D /* BugKitSwitchBaseUrlController.m in Sources */,
+				2E45239520622DC500A6C71D /* AppDelegate+ThirdService.m in Sources */,
+				2E45239620622DC500A6C71D /* TestVC.m in Sources */,
+				2E45239720622DC500A6C71D /* BugKitLogInfoViewController.m in Sources */,
+				2E45239820622DC500A6C71D /* AppDelegate.m in Sources */,
+				2E45239920622DC500A6C71D /* TLTabBarViewController.m in Sources */,
+				2E45239A20622DC500A6C71D /* BaseVC.m in Sources */,
+				2E45239B20622DC500A6C71D /* BugkitListTableViewController.m in Sources */,
+				2E45239C20622DC500A6C71D /* BugKitShakeWindow.m in Sources */,
+				2E45239D20622DC500A6C71D /* MeVC.m in Sources */,
+				2E45239E20622DC500A6C71D /* TLNavigationViewController.m in Sources */,
+				2E45239F20622DC500A6C71D /* main.m in Sources */,
+				2E4523A020622DC500A6C71D /* BugKitAppDownloadController.m in Sources */,
+				2E4523A120622DC500A6C71D /* LujhBaseUrlManager.m in Sources */,
+				2E4523A220622DC500A6C71D /* HomeVC.m in Sources */,
+				2E4523A320622DC500A6C71D /* LujhNetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,28 +665,46 @@
 		};
 		2E4521E92060EA6500A6C71D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25FF538F474CC77EAC5C49E9 /* Pods-BugKitExample.debug.xcconfig */;
+			baseConfigurationReference = CC8FE3DB659ABD9881EE6918 /* Pods-BugKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9M422A22FH;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DEVELOP=1",
+				);
 				INFOPLIST_FILE = BugKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lujh.BugKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugkit.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5e13535f-345e-4191-afe4-224f305d3acc";
+				PROVISIONING_PROFILE_SPECIFIER = bugKitDevelop;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2E4521EA2060EA6500A6C71D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8D3A4DF499C8FCC20EE53BD /* Pods-BugKitExample.release.xcconfig */;
+			baseConfigurationReference = C3E9ABB7F8EA7F4D10B830C4 /* Pods-BugKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9M422A22FH;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DEVELOP=1",
+				);
 				INFOPLIST_FILE = BugKitExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lujh.BugKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bugkit.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ed7fe19d-32bb-4159-99fd-6af7c1a75dc6";
+				PROVISIONING_PROFILE_SPECIFIER = bugkitDistribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -629,6 +737,42 @@
 			};
 			name = Release;
 		};
+		2E4523AF20622DC500A6C71D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SD_WEBP=1",
+				);
+				INFOPLIST_FILE = "BugKitExample copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lujh.BugKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E4523B020622DC500A6C71D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"SD_WEBP=1",
+				);
+				INFOPLIST_FILE = "BugKitExample copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lujh.BugKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -655,6 +799,15 @@
 			buildConfigurations = (
 				2E4521EC2060EA6500A6C71D /* Debug */,
 				2E4521ED2060EA6500A6C71D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E4523AE20622DC500A6C71D /* Build configuration list for PBXNativeTarget "BugKitExample copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E4523AF20622DC500A6C71D /* Debug */,
+				2E4523B020622DC500A6C71D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

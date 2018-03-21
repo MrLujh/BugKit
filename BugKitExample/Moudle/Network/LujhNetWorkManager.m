@@ -7,7 +7,7 @@
 //
 
 #import "LujhNetWorkManager.h"
-#import "TLTerminalInfo.h"
+#import "PhoneInformation.h"
 #import "AppDelegate.h"
 #import  <sys/socket.h>
 #import  <sys/sockio.h>
@@ -49,7 +49,7 @@ static LujhNetWorkManager *manager = nil;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    TLTerminalInfo *terminalInfo = [TLTerminalInfo sharedTerminalInfo];
+    PhoneInformation *terminalInfo = [PhoneInformation sharedTerminalInfo];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setValue:terminalInfo.appVersion forKey:@"appVersion"];
     [dic setValue:terminalInfo.deviceId forKey:@"deviceId"];
@@ -192,7 +192,7 @@ static LujhNetWorkManager *manager = nil;
         return;
     }
     
-    TLTerminalInfo *terminalInfo = [TLTerminalInfo sharedTerminalInfo];
+    PhoneInformation *terminalInfo = [PhoneInformation sharedTerminalInfo];
     NSString * appVersion = terminalInfo.appVersion;
     NSString * deviceId = terminalInfo.deviceId;
     NSString * deviceVersion = terminalInfo.systemVersion;

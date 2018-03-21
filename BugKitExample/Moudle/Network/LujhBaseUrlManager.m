@@ -10,7 +10,7 @@
 #import "LujhNetWorkManager.h"
 
 // 宏设置默认环境Host..
-#if (TAILIFE_DEVELOP==1)
+#if (DEVELOP==1)
 // Debug
 #define DEFAULT_URL_HOST @"https://119.120.88.640"
 

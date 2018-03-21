@@ -1,9 +1,10 @@
 //
-//  THTerminalInfo.h
-//  TaiHealthy
+//  PhoneInformation.h
+//  BugKitExample
 //
-//  Created by guagua on 17/3/24.
-//  Copyright © 2017年 taiKang. All rights reserved.
+//  Created by lujh on 2018/3/21.
+//  Copyright © 2018年 lujh. All rights reserved.
+//
 //终端信息
 /*
  appVersion (string): APP版本 ,
@@ -13,11 +14,9 @@
  systemVersion (string): 系统版本 ,
  terminalType (string): iOS/ANDROID
  */
-
 #import <Foundation/Foundation.h>
 
-@interface TLTerminalInfo : NSObject
-
+@interface PhoneInformation : NSObject
 @property (nonatomic,copy) NSString *appVersion;
 @property (nonatomic,copy) NSString *deviceId;
 @property (nonatomic,copy) NSString *mobileBrand;
@@ -26,5 +25,4 @@
 @property (nonatomic,copy) NSString *terminalType;
 
 + (instancetype)sharedTerminalInfo;
-
 @end

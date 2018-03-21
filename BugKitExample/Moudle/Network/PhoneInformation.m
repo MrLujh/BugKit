@@ -1,38 +1,38 @@
 //
-//  THTerminalInfo.m
-//  TaiHealthy
+//  PhoneInformation.m
+//  BugKitExample
 //
-//  Created by guagua on 17/3/24.
-//  Copyright © 2017年 taiKang. All rights reserved.
+//  Created by lujh on 2018/3/21.
+//  Copyright © 2018年 lujh. All rights reserved.
 //
 
-#import "TLTerminalInfo.h"
+#import "PhoneInformation.h"
 #import "sys/utsname.h"
 #import "LujhNetWorkManager.h"
 
-@implementation TLTerminalInfo
+@implementation PhoneInformation
 
 + (instancetype)sharedTerminalInfo{
     
-    static TLTerminalInfo *instance;
+    static PhoneInformation *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[TLTerminalInfo alloc] init];
+        instance = [[PhoneInformation alloc] init];
         [instance setTerminalInfo];
     });
     return instance;
 }
 
 - (void)setTerminalInfo{
-
+    
     _deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-//    _deviceId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    //    _deviceId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     _mobileType =  [self deviceVersion];
     _systemVersion = [[UIDevice currentDevice] systemVersion];
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     _appVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-//    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
-//    CTCarrier *carrier = info.subscriberCellularProvider;
+    //    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    //    CTCarrier *carrier = info.subscriberCellularProvider;
     _terminalType = @"iOS";
     _mobileBrand= @"iPhone";
     NSLog(@"%@--%@--%@--%@",_deviceId,_mobileType,_systemVersion,_appVersion);
@@ -158,6 +158,4 @@
     
     return deviceString;
 }
-
-
 @end

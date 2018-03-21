@@ -44,7 +44,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/builds"]];
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *args = [NSString stringWithFormat:@"appKey=%@&_api_key=%@",self.dataSource[@"appKey"],@"ff41dce0cf87631a6de250077a16b417"];
+    NSString *args = [NSString stringWithFormat:@"appKey=%@&_api_key=%@",self.dataSource[@"appKey"],self.dataSource[@"api_key"]];
     request.HTTPBody = [args dataUsingEncoding:NSUTF8StringEncoding];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *sessionDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -65,7 +65,7 @@
             else
             {
                 UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"下载最新版本" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/install?_api_key=%@&buildKey=%@",@"ff41dce0cf87631a6de250077a16b417",buildKey]]];
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/install?_api_key=%@&buildKey=%@",self.dataSource[@"api_key"],buildKey]]];
                     
                 }];
                 
