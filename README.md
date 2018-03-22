@@ -5,6 +5,7 @@
 
 * 如果发现pod search BugKit 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了
 
+* ![Mou icon](https://github.com/MrLujh/BugKit/blob/master/BugKit.gif)
 
 ### 项目中数据配置设置
 * 为内置测试工具提供公开配置入口
