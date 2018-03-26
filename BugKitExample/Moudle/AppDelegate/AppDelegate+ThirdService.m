@@ -5,6 +5,11 @@
 //  Created by zhanglin on 2017/12/19.
 //  Copyright © 2017年 TaiKang. All rights reserved.
 //
+#ifdef DEVELOP
+
+#else
+
+#endif
 
 #import "AppDelegate+ThirdService.h"
 #import "CocoaLumberjack/CocoaLumberjack.h"
@@ -22,7 +27,13 @@
     fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
     [DDLog addLogger:fileLogger];
     
-    [self initShakeWindow];
+    
+#ifdef DEVELOP
+     [self initShakeWindow];
+#else
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+#endif
+   
 }
 
 -(void)initShakeWindow
