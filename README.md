@@ -17,42 +17,48 @@ rm ~/Library/Caches/CocoaPods/search_index.json
 * 为内置测试工具提供公开配置入口
 
 
- ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/json.03.png)
+   导入头文件  #import "Bugkit.h"
 
 ```objc
+-(void)initShakeWindow
 {
-    "host":[
-            {
-            "name":"当前环境",
-            "type":"hostBaseTypeNow",
-            "url":""
-            },
-            {
-            "name":"测试环境",
-            "type":"hostBaseTypeTest",
-            "url":"https://119.120.88.640"
-            },
-            {
-            "name":"生产环境",
-            "type":"hostBaseTypeProduct",
-            "url":"https://lujh.com"
-            },
-            {
-            "name":"类环境",
-            "type":"hostBaseTypeStaging",
-            "url":""
-            },
-            {
-            "name":"个人环境",
-            "type":"hostBaseTypePersonal",
-            "url":""
-            }
-            ],
-    "pgyConfig":{
-        "appKey":"332ada3b2e4c856c09acc9796cfc9099",
-        "api_key":"1303c11160b475cc56b9d5df820a17ed",
-        "openUrl":"https://www.pgyer.com/R1mF"
-    }
+#ifdef DEVELOP
+    Class class = NSClassFromString(@"BugKitShakeWindow");
+    self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // 项目基础API配置设置
+    [BugKitBaseUrlManager registerNetWorkBaseNetInfo:@[@{
+                                                           @"name":@"当前环境",
+                                                           @"type":@"hostBaseTypeNow",
+                                                           @"url":@"https://119.120.88.640"
+                                                           },
+                                                       @{
+                                                           @"name":@"测试环境",
+                                                           @"type":@"hostBaseTypeTest",
+                                                           @"url":@"https://119.120.88.640"
+                                                           },
+                                                       @{
+                                                           @"name":@"生产环境",
+                                                           @"type":@"hostBaseTypeProduct",
+                                                           @"url":@"https://lujh.com"
+                                                           },
+                                                       @{
+                                                           @"name":@"类环境",
+                                                           @"type":@"hostBaseTypeStaging",
+                                                           @"url":@""
+                                                           },
+                                                       @{
+                                                           @"name":@"个人环境",
+                                                           @"type":@"hostBaseTypePersonal",
+                                                           @"url":@""
+                                                           }
+                                                       ] changeNotificationName:@"kEnvHostURLChangeNotificationName"];
+    
+    // 蒲公英API设置
+    [BugKitBaseUrlManager sessionStartWithPGYAppKey:@"332ada3b2e4c856c09acc9796cfc9099" APIKey:@"1303c11160b475cc56b9d5df820a17ed" historyUrl:@"https://www.pgyer.com/m6X7"];
+#else
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+#endif
 }
 ```
 
