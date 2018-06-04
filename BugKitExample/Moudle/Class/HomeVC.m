@@ -23,6 +23,7 @@
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
     btn.center = self.view.center;
     btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@"PuchTestVC" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
 }
