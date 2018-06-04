@@ -12,4 +12,5 @@
 #import "BugkitListTableViewController.h"
 #import "BugKitSwitchBaseUrlController.h"
 #import "BugKitAppDownloadController.h"
+#import "BugKitBaseUrlManager.h"
 #endif /* Bugkit_h */

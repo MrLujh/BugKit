@@ -7,6 +7,7 @@
 //
 
 #import "BugKitAppDownloadController.h"
+#import "BugKitDataModel.h"
 
 @interface BugKitAppDownloadController ()
 /** dataSource */
@@ -15,26 +16,32 @@
 
 @implementation BugKitAppDownloadController
 
+- (NSMutableArray *)dataSource
+{
+    if (_dataSource == nil) {
+        
+        _dataSource = [[NSMutableArray alloc] init];
+    }
+    return _dataSource;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    // 解析文件数据
+    // 解析数据
     [self parseFileData];
     
     // 蒲谷英平台数据请求
     [self requestNetworkPGY];
 }
 
-#pragma mark -解析文件数据
+#pragma mark -解析数据
 
 -(void)parseFileData
 {
-    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
-    id json = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    NSDictionary *dic = [json objectForKey:@"pgyConfig"];
-    self.dataSource = dic.mutableCopy;
+    NSDictionary *dict = [[BugKitDataModel sharedInstance] getPGYInfomationDict];
+    self.dataSource = dict.mutableCopy;
 }
 
 #pragma mark -蒲谷英平台数据请求
@@ -44,7 +51,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.pgyer.com/apiv2/app/builds"]];
     NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    NSString *args = [NSString stringWithFormat:@"appKey=%@&_api_key=%@",self.dataSource[@"appKey"],self.dataSource[@"api_key"]];
+    NSString *args = [NSString stringWithFormat:@"appKey=%@&_api_key=%@",self.dataSource[@"appKey"],self.dataSource[@"apiKey"]];
     request.HTTPBody = [args dataUsingEncoding:NSUTF8StringEncoding];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *sessionDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -93,5 +100,4 @@
 {
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
-
 @end

@@ -26,40 +26,14 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        baseUrlManager = [LujhBaseUrlManager getCurrentEnvObjFormUserDefault];
+        baseUrlManager = [[LujhBaseUrlManager alloc] init];
     });
     return baseUrlManager;
 }
 
-+ (instancetype)getCurrentEnvObjFormUserDefault {
-    
-    LujhBaseUrlManager *envDefault = [[LujhBaseUrlManager alloc] init];
-    NSString*resourcePath =[[NSBundle mainBundle] pathForResource:@"config.json" ofType:nil];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:resourcePath];
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    NSArray *arr = [json objectForKey:@"host"];
-    NSMutableArray *muArr = arr.mutableCopy;
-    NSMutableDictionary *dic = ((NSDictionary *)muArr[0]).mutableCopy;
-    [dic setObject:DEFAULT_URL_HOST forKey:@"url"];
-    muArr[0] = dic;
-    
-    
-    NSMutableDictionary *dataDictionary = [NSMutableDictionary dictionaryWithDictionary:json];
-    [dataDictionary setObject:muArr forKey:@"host"];
-    
-    NSData *jdata = [NSJSONSerialization dataWithJSONObject:dataDictionary options:NSJSONReadingAllowFragments error:nil];
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    [jdata writeToFile:filePath atomically:YES];
-    return envDefault;
-    
-}
-
 - (NSString *)hostBaseURL {
-    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
-    id json = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    NSArray *arr = [json objectForKey:@"host"];
-    return arr[0][@"url"];
+    
+     return (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"hostUrl"] >0?(NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"hostUrl"] : DEFAULT_URL_HOST;
 }
 
 @end

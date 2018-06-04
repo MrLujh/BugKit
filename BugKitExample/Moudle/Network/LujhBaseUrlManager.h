@@ -10,7 +10,7 @@
 
 #define kEnvHostURLChangeNotificationName @"kEnvHostURLChangeNotificationName"
 
-@interface LujhBaseUrlManager : NSObject<NSCoding>
+@interface LujhBaseUrlManager : NSObject
 
 +(instancetype)sharedInstance;
 /** 基础IP */

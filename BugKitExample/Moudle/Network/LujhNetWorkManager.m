@@ -66,6 +66,10 @@ static LujhNetWorkManager *manager = nil;
 }
 
 - (void)changeBaseUrl:(NSNotification *)notification {
+    
+    if ([notification.object objectForKey:@"url"]) {
+        [[NSUserDefaults standardUserDefaults] setObject:[notification.object objectForKey:@"url"] forKey:@"hostUrl"];
+    }
     NSString *baseUrl = [LujhBaseUrlManager sharedInstance].hostBaseURL;
     
     if (![baseUrl isEqualToString:manager.baseURL.absoluteString]) {
@@ -73,8 +77,6 @@ static LujhNetWorkManager *manager = nil;
             baseUrl = [baseUrl stringByAppendingString:@"/"];
         }
         self.changeUrl = [NSURL URLWithString:baseUrl];
-    } else {
-        self.changeUrl = nil;
     }
 }
 

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TLTabBarViewController.h"
 #import "AppDelegate+ThirdService.h"
-
+#import "AppDelegate+BugKit.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,11 @@
      *  打开数据库（地区表）
      */
     
+    // 第三方服务初始化
     [self initThirdService];
+    
+    // 摇一摇初始化Window
+    [self initShakeWindow];
     
     // 设置根控制器
     [self selectRootController];
@@ -38,7 +42,6 @@
 - (void)selectRootController
 {
     TLTabBarViewController *tabBarVC = [[TLTabBarViewController alloc]init];
-    self.tabBarVC = tabBarVC;
     self.window.rootViewController = tabBarVC;
 }
 

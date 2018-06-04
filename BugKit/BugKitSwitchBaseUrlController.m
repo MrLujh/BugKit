@@ -10,45 +10,50 @@
 #define kEnvHostURLChangeNotificationName @"kEnvHostURLChangeNotificationName"
 
 #import "BugKitSwitchBaseUrlController.h"
-
+#import "BugKitDataModel.h"
 @interface BugKitSwitchBaseUrlController ()
-@property (strong, nonatomic) NSMutableArray * dataSource;
-@property (strong, nonatomic) NSMutableArray *titleArray;
-@property (strong, nonatomic) NSMutableArray *proNameArray;
-
-@property (strong, nonatomic) NSMutableArray *arr3;
-
-@property (copy , nonatomic) NSIndexPath *seletedPath;
+/** dataSource */
+@property (strong, nonatomic) NSMutableArray *dataSource;
 @end
 
 @implementation BugKitSwitchBaseUrlController
+
+- (NSMutableArray *)dataSource
+{
+    if (_dataSource == nil) {
+        
+        _dataSource = [[NSMutableArray alloc] init];
+    }
+    return _dataSource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"切换BaseUrl";
     
-    // 解析文件数据
+    // 解析数据
     [self parseFileData];
     
     [self.view addSubview:self.tableView];
     
 }
 
-#pragma mark -解析文件数据
+#pragma mark -解析数据
 
 -(void)parseFileData
 {
-    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
-    id json = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    NSArray *arr = [json objectForKey:@"host"];
-    self.dataSource = arr.mutableCopy;
-    [self.tableView reloadData];
-}
-
-- (NSArray *)urlsWithType:(NSInteger)type {
+    self.dataSource = [BugKitDataModel sharedInstance].baseNetArray.mutableCopy;
     
-    return nil;
+    NSDictionary *currentHostDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"BugKitCurrentHostUrl"];
+    NSString *currentHostUrl = currentHostDict[@"url"];
+    if (currentHostUrl.length >0) {
+       
+        if (![currentHostUrl isEqualToString:self.dataSource.firstObject[@"url"]]) {
+
+            [self.dataSource replaceObjectAtIndex:0 withObject:currentHostDict];
+        }
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark -UITableViewDataSource
@@ -120,10 +125,11 @@
     }else {
         
         self.dataSource[0] = self.dataSource[indexPath.section];
-        [self writeJsonData];
         [self.tableView reloadData];
     }
-    [[NSNotificationCenter defaultCenter] postNotificationName:kEnvHostURLChangeNotificationName object:nil];
+    NSString *notificationName = [BugKitDataModel sharedInstance].notificationName.length >0?[BugKitDataModel sharedInstance].notificationName:kEnvHostURLChangeNotificationName;
+    [[NSUserDefaults standardUserDefaults] setObject:self.dataSource[indexPath.section] forKey:@"BugKitCurrentHostUrl"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object: self.dataSource[0]];
 }
 
 - (void)addAlert {
@@ -136,7 +142,6 @@
         NSMutableArray *dic = ((NSDictionary *)weakSelf.dataSource[0]).mutableCopy;
         [dic setValue:alertController.textFields[0].text forKey:@"url"];
         weakSelf.dataSource[0] = dic.copy;
-        [weakSelf writeJsonData];
         [weakSelf.tableView reloadData];
     }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -145,13 +150,6 @@
     [alertController addAction:cancel];
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];
-}
-
-- (void)writeJsonData {
-    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    NSDictionary *dic = @{@"host":self.dataSource};
-    NSData *json_data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-    [json_data writeToFile:filePatch atomically:YES];
 }
 
 - (UITableView *)tableView {

@@ -9,6 +9,6 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate (ThirdService)
+// 第三方服务初始化
 -(void)initThirdService;
--(void)initShakeWindow;
 @end

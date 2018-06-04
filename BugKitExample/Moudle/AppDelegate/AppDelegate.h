@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TLTabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (nonatomic,strong) TLTabBarViewController *tabBarVC;
 
 @end
 
