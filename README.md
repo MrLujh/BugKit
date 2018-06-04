@@ -71,14 +71,13 @@ rm ~/Library/Caches/CocoaPods/search_index.json
     https://www.pgyer.com/doc/view/api#paramInfo
    
 ### 项目中如何使用
-* 项目中数据配置设置按照上图配置，key value 对照
 * 网络层的封装，新建一个类来处理基础IP的切换，方便给测试打包和APP上线在同一个版本中不同环境的切换
 ```objc
 #import <Foundation/Foundation.h>
 
 #define kEnvHostURLChangeNotificationName @"kEnvHostURLChangeNotificationName"
 
-@interface LujhBaseUrlManager : NSObject<NSCoding>
+@interface LujhBaseUrlManager : NSObject
 
 +(instancetype)sharedInstance;
 /** 基础IP */
@@ -106,42 +105,15 @@ rm ~/Library/Caches/CocoaPods/search_index.json
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        baseUrlManager = [LujhBaseUrlManager getCurrentEnvObjFormUserDefault];
+        baseUrlManager = [[LujhBaseUrlManager alloc] init];
     });
     return baseUrlManager;
 }
 
-+ (instancetype)getCurrentEnvObjFormUserDefault {
-    
-    LujhBaseUrlManager *envDefault = [[LujhBaseUrlManager alloc] init];
-    NSString*resourcePath =[[NSBundle mainBundle] pathForResource:@"config.json" ofType:nil];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:resourcePath];
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    NSArray *arr = [json objectForKey:@"host"];
-    NSMutableArray *muArr = arr.mutableCopy;
-    NSMutableDictionary *dic = ((NSDictionary *)muArr[0]).mutableCopy;
-    [dic setObject:DEFAULT_URL_HOST forKey:@"url"];
-    muArr[0] = dic;
-    
-    
-    NSMutableDictionary *dataDictionary = [NSMutableDictionary dictionaryWithDictionary:json];
-    [dataDictionary setObject:muArr forKey:@"host"];
-    
-    NSData *jdata = [NSJSONSerialization dataWithJSONObject:dataDictionary options:NSJSONReadingAllowFragments error:nil];
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    [jdata writeToFile:filePath atomically:YES];
-    return envDefault;
-    
-}
-
 - (NSString *)hostBaseURL {
-    NSString *filePatch = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingPathComponent:@"config.json"];
-    NSData *jdata = [[NSData alloc] initWithContentsOfFile:filePatch];
-    id json = [NSJSONSerialization JSONObjectWithData:jdata options:NSJSONReadingAllowFragments error:nil];
-    NSArray *arr = [json objectForKey:@"host"];
-    return arr[0][@"url"];
+    
+     return (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"hostUrl"] >0?(NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"hostUrl"] : DEFAULT_URL_HOST;
 }
-
 @end
 ```
 * 更重要的一步是项目中TARGETS 要copy一个新的targets，其作用是copy的那个是用来打包上架App Store，另外一个开放给测试打包，如下图：
