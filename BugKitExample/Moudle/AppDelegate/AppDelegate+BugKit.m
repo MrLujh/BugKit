@@ -21,6 +21,7 @@
     Class class = NSClassFromString(@"BugKitShakeWindow");
     self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // 项目基础API配置设置
     [BugKitBaseUrlManager registerNetWorkBaseNetInfo:@[@{
                                                            @"name":@"当前环境",
                                                            @"type":@"hostBaseTypeNow",
@@ -48,6 +49,7 @@
                                                            }
                                                        ] changeNotificationName:@"kEnvHostURLChangeNotificationName"];
     
+    // 蒲公英API设置
     [BugKitBaseUrlManager sessionStartWithPGYAppKey:@"332ada3b2e4c856c09acc9796cfc9099" APIKey:@"1303c11160b475cc56b9d5df820a17ed" historyUrl:@"https://www.pgyer.com/m6X7"];
 #else
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

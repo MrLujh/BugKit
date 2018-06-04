@@ -23,7 +23,7 @@
 
 /**
  *  @method  getPGYInfomationDict
- *  @discribtion 获取蒲公英相关信息字典： "appKey":"蒲公英平台注册appKey"  "openUrl"蒲公英历史版本链接
+ *  @discribtion 获取蒲公英相关信息字典： "appKey":"蒲公英平台注册appKey" "apiKey":"蒲公英平台注册apiKey" "openUrl"蒲公英历史版本链接
  */
 -(NSDictionary *)getPGYInfomationDict;
 @end
