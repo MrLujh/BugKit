@@ -126,16 +126,6 @@ rm ~/Library/Caches/CocoaPods/search_index.json
 
  ![(icon)](https://github.com/MrLujh/BugKit/blob/master/resource/network_03.png)
 
-* 导入bugkit之后 库的头文件不需要引入，在APPdelegate
-
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {}方法中调入
-
--(void)initShakeWindow
-{
-    Class class = NSClassFromString(@"BugKitShakeWindow");
-    self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-}
-```
+## 这里写的有点不是很详细，，，，，下载项目，里面有示例可以作为参考
 
 ![Mou icon](https://github.com/MrLujh/Fastlane--Packaging/blob/master/111.gif)
