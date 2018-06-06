@@ -13,7 +13,8 @@ s.requires_arc = true
 s.public_header_files = 'BugKit/BugKit.h'
 s.source_files = 'lujhPrivate/lujh.h'
 s.ios.deployment_target = '7.0'
-
+s.dependency 'FLEX'
+s.dependency 'CocoaLumberjack'
 
 
 s.subspec 'ShakeWindow' do |ss|
