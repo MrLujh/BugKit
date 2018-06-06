@@ -11,6 +11,7 @@
 #import "BugKitAppDownloadController.h" // 蒲谷英下载
 #import "FLEXManager.h" // FLEX tools
 #import "BugKitLogInfoViewController.h" // 网络请求日志
+#import "BugKitSystemStateViewController.h" // 系统性能
 @interface BugkitListTableViewController ()
 /** dataSource */
 @property (nonatomic,strong) NSMutableArray *dataSource;
@@ -22,7 +23,7 @@
 {
     if (_dataSource == nil) {
         
-        NSArray *titleArray = @[@"网络请求日志",@"FLEX tools",@"切换BaseUrl",@"蒲公英安装最新版"];
+        NSArray *titleArray = @[@"网络请求日志",@"FLEX tools",@"切换BaseUrl",@"蒲公英安装最新版",@"系统性能"];
         _dataSource = titleArray.mutableCopy;
     }
     return _dataSource;
@@ -85,6 +86,12 @@
         {
             BugKitAppDownloadController *vc = [[BugKitAppDownloadController alloc] init];
             [self.navigationController pushViewController:vc animated:true];
+        }
+            break;
+        case 4:
+        {
+            BugKitSystemStateViewController *vc = [[BugKitSystemStateViewController alloc] init];
+            [self presentViewController:vc animated:YES completion:nil];
         }
             break;
         default:
