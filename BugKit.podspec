@@ -10,22 +10,22 @@ s.license     = { :type => "MIT", :file => "LICENSE" }
 
 s.platform = :ios, '7.0'
 s.requires_arc = true
-s.public_header_files = 'BugKit/ShakeWindow/BugKit.h'
-s.source_files = 'BugKit/ShakeWindow/BugKit.h'
+s.public_header_files = 'BugKit/BugKit.h'
+s.source_files = 'BugKit/BugKit.h'
 s.ios.deployment_target = '7.0'
-s.dependency 'FLEX'
-s.dependency 'CocoaLumberjack'
 
 
 s.subspec 'ShakeWindow' do |ss|
-    
+    s.dependency 'FLEX'
+
     ss.source_files = 'BugKit/ShakeWindow/**/*.{h,m}'
     ss.public_header_files = 'BugKit/ShakeWindow/**/*.h'
     
   end
 
 s.subspec 'BaseUrl' do |ss|
-   
+    s.dependency 'CocoaLumberjack'
+
     ss.source_files = 'BugKit/BaseUrl/**/*.{h,m}'
     ss.public_header_files = 'BugKit/BaseUrl/**/*.h'
     
@@ -39,8 +39,6 @@ s.subspec 'LogInfo' do |ss|
   end
 
 s.subspec 'AppDownLoad' do |ss|
-
-    s.dependency 'BaseUrl'
 
     ss.source_files = 'BugKit/AppDownLoad/**/*.{h,m}'
     ss.public_header_files = 'BugKit/AppDownLoad/**/*.h'
