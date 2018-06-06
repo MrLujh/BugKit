@@ -32,21 +32,21 @@ EOS
  
   
   s.subspec 'ShakeWindow' do |ss|
-    ss.source_files = 'BugKit/BugKitShakeWindow.{h,m}','BugKit/BugkitListTableViewController.{h,m}'
-    ss.public_header_files = 'BugKit/BugKitShakeWindow.h','BugKit/BugkitListTableViewController.h'
+    ss.source_files = 'BugKit/BugKit/BugKitShakeWindow.{h,m}','BugKit/BugKit/BugkitListTableViewController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKit/BugKitShakeWindow.h','BugKit/BugKit/BugkitListTableViewController.h'
     
   end
 
   s.subspec 'LogInfo' do |ss|
-    ss.source_files = 'BugKit/BugKitLogInfoViewController.{h,m}'
-    ss.public_header_files = 'BugKit/BugKitLogInfoViewController.h'
+    ss.source_files = 'BugKit/BugKit/BugKitLogInfoViewController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKit/BugKitLogInfoViewController.h'
   end
 
   s.subspec 'BaseUrl' do |ss|
     ss.ios.deployment_target = '7.0'
     
-    ss.source_files = 'BugKit/BugKitDataModel.{h,m}','BugKit/BugKitSwitchBaseUrlController.{h,m}','BugKit/BugKitBaseUrlManager.{h,m}'
-    ss.public_header_files = 'BugKit/BugKitDataModel.h','BugKit/BugKitSwitchBaseUrlController.h','BugKit/BugKitBaseUrlManager.h'
+    ss.source_files = 'BugKit/BugKit/BugKitDataModel.{h,m}','BugKit/BugKit/BugKitSwitchBaseUrlController.{h,m}','BugKit/BugKit/BugKitBaseUrlManager.{h,m}'
+    ss.public_header_files = 'BugKit/BugKit/BugKitDataModel.h','BugKit/BugKit/BugKitSwitchBaseUrlController.h','BugKit/BugKit/BugKitBaseUrlManager.h'
   end
 
   s.subspec 'AppDownLoad' do |ss|
@@ -55,8 +55,8 @@ EOS
     ss.dependency 'BugKit/LogInfo'
     ss.dependency 'BugKit/BaseUrl' 
   
-    ss.source_files = 'BugKit/BugKitAppDownloadController.{h,m}'
-    ss.public_header_files = 'BugKit/BugKitAppDownloadController.h'
+    ss.source_files = 'BugKit/BugKit/BugKitAppDownloadController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKit/BugKitAppDownloadController.h'
   end
 
   s.subspec 'SystemState' do |ss|
