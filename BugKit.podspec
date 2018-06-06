@@ -1,49 +1,66 @@
 Pod::Spec.new do |s|
-s.name        = 'BugKit'
-s.version     = '4.0.0'
-s.authors     = { 'MrLujh' => '287929070@qq.com' }
-s.homepage    = 'https://github.com/MrLujh/BugKit'
-s.summary     = 'Very useful built-in tools'
-s.source      = { :git => 'https://github.com/MrLujh/BugKit.git',
-:tag => s.version.to_s }
-s.license     = { :type => "MIT", :file => "LICENSE" }
-s.platform = :ios, '7.0'
-s.requires_arc = true
-s.public_header_files = 'BugKit/BugKit.h'
-s.source_files = 'BugKit/BugKit.h'
-s.ios.deployment_target = '7.0'
+  s.name     = 'BugKit'
+  s.version  = '4.0.0'
+  s.license  = 'MIT'
+  s.summary  = 'A delightful iOS and OS X networking framework.'
+  s.homepage = 'https://github.com/MrLujh/BugKit'
+  s.authors  = { 'lujh' => 'm@mattt.me' }
+  s.source   = { :git => 'https://github.com/MrLujh/BugKit.git', :tag =>    s.version, :submodules => true }
+  s.requires_arc = true
+  
+  s.public_header_files = 'BugKit/BugKit.h'
+  s.source_files = 'BugKit/BugKit.h'
+  s.dependency 'FLEX'
+  s.dependency 'CocoaLumberjack'
+  pch_Bu = <<-EOS
+#ifndef TARGET_OS_IOS
+  #define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
 
+#ifndef TARGET_OS_WATCH
+  #define TARGET_OS_WATCH 0
+#endif
 
-s.subspec 'ShakeWindow' do |ss|
-    ss.source_files = 'BugKit/ShakeWindow/BugKitShakeWindow.{h,m}','BugKit/ShakeWindow/BugkitListTableViewController.{h,m}'
-    ss.public_header_files = 'BugKit/ShakeWindow/BugKitShakeWindow.h','BugKit/ShakeWindow/BugkitListTableViewController.h'
-   
-    ss.dependency 'FLEX'
+#ifndef TARGET_OS_TV
+  #define TARGET_OS_TV 0
+#endif
+EOS
+  s.prefix_header_contents = pch_Bu
+  
+  s.ios.deployment_target = '7.0'
+ 
+  
+  s.subspec 'ShakeWindow' do |ss|
+    ss.source_files = 'BugKit/BugKitShakeWindow.{h,m}','BugKit/BugkitListTableViewController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKitShakeWindow.h','BugKit/BugkitListTableViewController.h'
+    
   end
 
   s.subspec 'LogInfo' do |ss|
-    ss.source_files = 'BugKit/LogInfo/BugKitLogInfoViewController.{h,m}'
-    ss.public_header_files = 'BugKit/LogInfo/BugKitLogInfoViewController.h'
-    ss.dependency 'CocoaLumberjack'
+    ss.source_files = 'BugKit/BugKitLogInfoViewController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKitLogInfoViewController.h'
   end
 
   s.subspec 'BaseUrl' do |ss|
-    ss.source_files = 'BugKit/BaseUrl/BugKitDataModel.{h,m}','BugKit/BaseUrl/BugKitSwitchBaseUrlController.{h,m}','BugKit/BaseUrl/BugKitBaseUrlManager.{h,m}'
-    ss.public_header_files = 'BugKit/BaseUrl/BugKitDataModel.h','BugKit/BaseUrl/BugKitSwitchBaseUrlController.h','BugKit/BaseUrl/BugKitBaseUrlManager.h'
+    ss.ios.deployment_target = '7.0'
+    
+    ss.source_files = 'BugKit/BugKitDataModel.{h,m}','BugKit/BugKitSwitchBaseUrlController.{h,m}','BugKit/BugKitBaseUrlManager.{h,m}'
+    ss.public_header_files = 'BugKit/BugKitDataModel.h','BugKit/BugKitSwitchBaseUrlController.h','BugKit/BugKitBaseUrlManager.h'
   end
 
   s.subspec 'AppDownLoad' do |ss|
+
     ss.dependency 'BugKit/ShakeWindow'
     ss.dependency 'BugKit/LogInfo'
-    ss.dependency 'BugKit/BaseUrl'
-
-    ss.source_files = 'BugKit/AppDownLoad/BugKitAppDownloadController.{h,m}'
-    ss.public_header_files = 'BugKit/AppDownLoad/BugKitAppDownloadController.h'
+    ss.dependency 'BugKit/BaseUrl' 
+  
+    ss.source_files = 'BugKit/BugKitAppDownloadController.{h,m}'
+    ss.public_header_files = 'BugKit/BugKitAppDownloadController.h'
   end
 
   s.subspec 'SystemState' do |ss|
     ss.ios.deployment_target = '7.0'
-    ss.dependency 'BugKit/SystemState'
+    ss.dependency 'BugKit/AppDownLoad'
 
     ss.public_header_files = 'SystemState/*.h'
     ss.source_files = 'SystemState'
