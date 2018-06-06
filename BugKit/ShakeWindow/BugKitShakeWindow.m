@@ -7,7 +7,7 @@
 //
 
 #import "BugKitShakeWindow.h"
-#import "BugkitListTableViewController.h"
+#import "BugKitListTableViewController.h"
 
 @implementation BugKitShakeWindow
 
@@ -24,7 +24,7 @@
 {
     if (motion == UIEventSubtypeMotionShake)
     {
-        BugkitListTableViewController *vc = [[BugkitListTableViewController alloc] init];
+        BugKitListTableViewController *vc = [[BugKitListTableViewController alloc] init];
         UINavigationController *navigator=[[UINavigationController alloc] initWithRootViewController:vc];
         [self.rootViewController presentViewController:navigator animated:YES completion:nil];
     }

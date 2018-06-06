@@ -6,18 +6,18 @@
 //  Copyright © 2018年 lujh. All rights reserved.
 //
 
-#import "BugkitListTableViewController.h"
+#import "BugKitListTableViewController.h"
 #import "BugKitSwitchBaseUrlController.h" // 基础网址切换
 #import "BugKitAppDownloadController.h" // 蒲谷英下载
 #import "FLEXManager.h" // FLEX tools
 #import "BugKitLogInfoViewController.h" // 网络请求日志
 #import "BugKitSystemStateViewController.h" // 系统性能
-@interface BugkitListTableViewController ()
+@interface BugKitListTableViewController ()
 /** dataSource */
 @property (nonatomic,strong) NSMutableArray *dataSource;
 @end
 
-@implementation BugkitListTableViewController
+@implementation BugKitListTableViewController
 
 -(NSMutableArray *)dataSource
 {
