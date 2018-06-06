@@ -18,9 +18,16 @@ s.dependency 'CocoaLumberjack'
 
 
 s.subspec 'ShakeWindow' do |ss|
-   
+    
     ss.source_files = 'BugKit/ShakeWindow/**/*.{h,m}'
     ss.public_header_files = 'BugKit/ShakeWindow/**/*.h'
+    
+  end
+
+s.subspec 'BaseUrl' do |ss|
+   
+    ss.source_files = 'BugKit/BaseUrl/**/*.{h,m}'
+    ss.public_header_files = 'BugKit/BaseUrl/**/*.h'
     
   end
 
@@ -32,7 +39,9 @@ s.subspec 'LogInfo' do |ss|
   end
 
 s.subspec 'AppDownLoad' do |ss|
-   
+
+    s.dependency 'BaseUrl'
+
     ss.source_files = 'BugKit/AppDownLoad/**/*.{h,m}'
     ss.public_header_files = 'BugKit/AppDownLoad/**/*.h'
     
@@ -45,10 +54,4 @@ s.subspec 'SystemState' do |ss|
     
   end
 
-s.subspec 'BaseUrl' do |ss|
-   
-    ss.source_files = 'BugKit/BaseUrl/**/*.{h,m}'
-    ss.public_header_files = 'BugKit/BaseUrl/**/*.h'
-    
-  end
 end
