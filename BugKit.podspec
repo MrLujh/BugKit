@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
-  s.name     = 'BugKit'
-  s.version  = '4.0.0'
-  s.license  = 'MIT'
-  s.summary  = 'A delightful iOS and OS X networking framework.'
-  s.homepage = 'https://github.com/MrLujh/BugKit'
-  s.authors  = { 'lujh' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/MrLujh/BugKit.git', :tag =>    s.version, :submodules => true }
+s.name        = 'BugKit'
+s.version     = '4.0.0'
+s.authors     = { 'MrLujh' => '287929070@qq.com' }
+s.homepage    = 'https://github.com/MrLujh/BugKit'
+s.summary     = 'Very useful built-in tools'
+s.source      = { :git => 'https://github.com/MrLujh/BugKit.git',
+:tag => s.version.to_s }
+s.license     = { :type => "MIT", :file => "LICENSE" }
   s.requires_arc = true
   
   s.public_header_files = 'BugKit/BugKit.h'
