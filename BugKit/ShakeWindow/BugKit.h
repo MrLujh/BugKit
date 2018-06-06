@@ -9,7 +9,7 @@
 #ifndef BugKit_h
 #define BugKit_h
 #import "BugKitShakeWindow.h"
-#import "BugkitListTableViewController.h"
+#import "BugKitListTableViewController.h"
 #import "BugKitSwitchBaseUrlController.h"
 #import "BugKitAppDownloadController.h"
 #import "BugKitBaseUrlManager.h"
