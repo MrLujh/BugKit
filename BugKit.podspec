@@ -10,8 +10,8 @@ s.license     = { :type => "MIT", :file => "LICENSE" }
 
 s.platform = :ios, '7.0'
 s.requires_arc = true
-s.public_header_files = 'BugKit/BugKit.h'
-s.source_files = 'BugKit/BugKit.h'
+s.public_header_files = 'BugKit/ShakeWindow/BugKit.h'
+s.source_files = 'BugKit/ShakeWindow/BugKit.h'
 s.ios.deployment_target = '7.0'
 s.dependency 'FLEX'
 s.dependency 'CocoaLumberjack'
