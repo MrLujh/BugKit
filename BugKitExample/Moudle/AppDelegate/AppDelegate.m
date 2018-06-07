@@ -32,8 +32,6 @@
     // 设置根控制器
     [self selectRootController];
 
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -41,8 +39,11 @@
 
 - (void)selectRootController
 {
+
     TLTabBarViewController *tabBarVC = [[TLTabBarViewController alloc]init];
     self.window.rootViewController = tabBarVC;
+    
+    [self.window makeKeyAndVisible];
 }
 
 @end

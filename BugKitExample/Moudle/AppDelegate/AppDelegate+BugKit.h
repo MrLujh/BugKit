@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 
+@class BugKitAPMWindow;
+
 @interface AppDelegate (BugKit)
+
+@property (nonatomic,copy) BugKitAPMWindow *apmWindow;
 // 摇一摇初始化Window
 -(void)initShakeWindow;
 @end

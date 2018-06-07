@@ -12,12 +12,35 @@
 #endif
 
 #import "AppDelegate+BugKit.h"
+#import <objc/runtime.h>
 
 @implementation AppDelegate (BugKit)
+
+- (BugKitAPMWindow *)apmWindow
+{
+    BugKitAPMWindow *_apmWindow = objc_getAssociatedObject(self, _cmd);
+    if (!_apmWindow) {
+        
+        objc_setAssociatedObject(self, _cmd, _apmWindow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return _apmWindow;
+}
+
+- (void)setApmWindow:(BugKitAPMWindow *)apmWindow
+{
+  objc_setAssociatedObject(self, @selector(apmWindow), apmWindow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
 
 -(void)initShakeWindow
 {
 #ifdef DEVELOP
+    
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+    Class class1 = NSClassFromString(@"BugKitAPMWindow");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.apmWindow =   [[class1 alloc] initWithFrame:CGRectMake(0, 200, 60, 60)];
+    });
+    
     Class class = NSClassFromString(@"BugKitShakeWindow");
     self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
