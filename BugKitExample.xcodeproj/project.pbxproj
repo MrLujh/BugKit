@@ -126,7 +126,7 @@
 		2E1E0C5F20C7C1F3003373F5 /* BugKitDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugKitDataModel.m; sourceTree = "<group>"; };
 		2E1E0C6020C7C1F3003373F5 /* BugKitSwitchBaseUrlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugKitSwitchBaseUrlController.m; sourceTree = "<group>"; };
 		2E1E0C6120C7C1F3003373F5 /* BugKitBaseUrlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugKitBaseUrlManager.m; sourceTree = "<group>"; };
-		2E1E0C8920C7C316003373F5 /* BugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKit.h; sourceTree = "<group>"; };
+		2E1E105920C9048E003373F5 /* BugKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKit.h; sourceTree = "<group>"; };
 		2E2E3FE820C5161B0051EC44 /* AppDelegate+BugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BugKit.h"; sourceTree = "<group>"; };
 		2E2E3FE920C5161B0051EC44 /* AppDelegate+BugKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BugKit.m"; sourceTree = "<group>"; };
 		2E4521BC2060EA6500A6C71D /* BugKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,11 +198,12 @@
 		2E1E0C3520C7C1F3003373F5 /* BugKit */ = {
 			isa = PBXGroup;
 			children = (
-				2E1E0C5520C7C1F3003373F5 /* ShakeWindow */,
+				2E1E105920C9048E003373F5 /* BugKit.h */,
 				2E1E0C3620C7C1F3003373F5 /* LogInfo */,
+				2E1E0C5B20C7C1F3003373F5 /* BaseUrl */,
 				2E1E0C3920C7C1F3003373F5 /* AppDownLoad */,
 				2E1E0C3C20C7C1F3003373F5 /* SystemState */,
-				2E1E0C5B20C7C1F3003373F5 /* BaseUrl */,
+				2E1E0C5520C7C1F3003373F5 /* ShakeWindow */,
 			);
 			path = BugKit;
 			sourceTree = SOURCE_ROOT;
@@ -210,8 +211,8 @@
 		2E1E0C3620C7C1F3003373F5 /* LogInfo */ = {
 			isa = PBXGroup;
 			children = (
-				2E1E0C3720C7C1F3003373F5 /* BugKitLogInfoViewController.m */,
 				2E1E0C3820C7C1F3003373F5 /* BugKitLogInfoViewController.h */,
+				2E1E0C3720C7C1F3003373F5 /* BugKitLogInfoViewController.m */,
 			);
 			path = LogInfo;
 			sourceTree = "<group>";
@@ -228,6 +229,10 @@
 		2E1E0C3C20C7C1F3003373F5 /* SystemState */ = {
 			isa = PBXGroup;
 			children = (
+				2E1E0C5320C7C1F3003373F5 /* BugKitSystemStateViewController.h */,
+				2E1E0C4520C7C1F3003373F5 /* BugKitSystemStateViewController.m */,
+				2E1E0C5220C7C1F3003373F5 /* BugKitSystemStateView.h */,
+				2E1E0C4720C7C1F3003373F5 /* BugKitSystemStateView.m */,
 				2E1E0C3D20C7C1F3003373F5 /* TYFPSLabel.h */,
 				2E1E0C3E20C7C1F3003373F5 /* TYWeakProxy.h */,
 				2E1E0C3F20C7C1F3003373F5 /* BaseChartView.h */,
@@ -236,9 +241,7 @@
 				2E1E0C4220C7C1F3003373F5 /* TYDiskUsage.m */,
 				2E1E0C4320C7C1F3003373F5 /* TYSystemMonitor.h */,
 				2E1E0C4420C7C1F3003373F5 /* TYNetworkFlow.h */,
-				2E1E0C4520C7C1F3003373F5 /* BugKitSystemStateViewController.m */,
 				2E1E0C4620C7C1F3003373F5 /* TYDeviceInfo.h */,
-				2E1E0C4720C7C1F3003373F5 /* BugKitSystemStateView.m */,
 				2E1E0C4820C7C1F3003373F5 /* TYCPUUsage.h */,
 				2E1E0C4920C7C1F3003373F5 /* TYWeakProxy.m */,
 				2E1E0C4A20C7C1F3003373F5 /* BaseChartView.m */,
@@ -249,8 +252,6 @@
 				2E1E0C4F20C7C1F3003373F5 /* TYDiskUsage.h */,
 				2E1E0C5020C7C1F3003373F5 /* TYFPSMonitor.m */,
 				2E1E0C5120C7C1F3003373F5 /* TYDeviceInfo.m */,
-				2E1E0C5220C7C1F3003373F5 /* BugKitSystemStateView.h */,
-				2E1E0C5320C7C1F3003373F5 /* BugKitSystemStateViewController.h */,
 				2E1E0C5420C7C1F3003373F5 /* TYCPUUsage.m */,
 			);
 			path = SystemState;
@@ -259,7 +260,6 @@
 		2E1E0C5520C7C1F3003373F5 /* ShakeWindow */ = {
 			isa = PBXGroup;
 			children = (
-				2E1E0C8920C7C316003373F5 /* BugKit.h */,
 				2E1E0C5620C7C1F3003373F5 /* BugKitShakeWindow.h */,
 				2E1E0C5920C7C1F3003373F5 /* BugKitShakeWindow.m */,
 				2E1E0C5A20C7C1F3003373F5 /* BugKitListTableViewController.h */,
