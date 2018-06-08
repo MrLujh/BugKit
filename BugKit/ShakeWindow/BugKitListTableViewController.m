@@ -41,6 +41,13 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(b) name:@"kDismissListVCNotification" object:nil];
+}
+
+- (void)b
+{
+    [self back];
 }
 
 #pragma mark -UITableViewDataSource
@@ -104,6 +111,11 @@
 - (void)back {
     
     [self dismissViewControllerAnimated:true completion:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
-@class BugKitAPMWindow;
+#import "BugKit.h"
 
 @interface AppDelegate (BugKit)
 

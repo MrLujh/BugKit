@@ -9,7 +9,6 @@
 #import "BugKitAPMWindow.h"
 #import "BugKitAPMView.h"
 
-
 @interface BugKitAPMWindow()<UIGestureRecognizerDelegate>
 /** apmView */
 @property (nonatomic,strong) BugKitAPMView *apmView;
@@ -25,7 +24,7 @@
         self.backgroundColor = [UIColor clearColor];
         self.windowLevel = UIWindowLevelAlert + 100.0;
         self.hidden = YES;
-    
+        
         // 初始化Subviews
         [self setupSubviews];
         
@@ -39,8 +38,18 @@
 
 - (void)hidenAndShowAPMWindow
 {
-    
     self.hidden = !self.hidden;
+    
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    if (self.hidden) {
+       
+        dict = @{@"isShow":@"0"};
+    }else {
+        
+        dict = @{@"isShow":@"1"};
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"kStopAPMWindowTimerNotification" object:nil userInfo:dict];
 }
 
 #pragma mark -初始化Subviews
@@ -51,32 +60,30 @@
     self.apmView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.8];
     [self addSubview:self.apmView];
     
-    
     // 添加改变window位置手势
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changePostion:)];
-    [self addGestureRecognizer:tap];
-    tap.delegate = self;
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(changePostion:)];
+    
+    // 2.将拖拽手势添加到图片视图上
+    [self addGestureRecognizer:panGestureRecognizer];
 }
 
-- (void)btnClick
-{
-    
-}
 #pragma mark --改变window位置手势
 
 -(void)changePostion:(UIPanGestureRecognizer *)pan
 
 {
-    
     CGPoint point = [pan translationInView:self];
-    
-    
     
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
-    
+    if (pan.state==UIGestureRecognizerStateEnded) {
+        CGFloat  fpsx = 0,fpsy=0;
+        fpsx = (self.frame.origin.x>width/2.0)?0.15:0.85;
+        fpsy = (self.frame.origin.y>height/2.0)?0.15:0.85;
+        self.apmView.fpsLab.center = CGPointMake(fpsx*60, fpsy*60);
+    }
     
     CGRect originalFrame = self.frame;
     
@@ -97,9 +104,7 @@
     [pan setTranslation:CGPointZero inView:self];
     
     
-    
     if (pan.state == UIGestureRecognizerStateBegan) {
-        
         
         
     }else if (pan.state == UIGestureRecognizerStateChanged){
@@ -107,8 +112,6 @@
         
         
     } else {
-        
-        
         
         CGRect frame = self.frame;
         
@@ -157,12 +160,7 @@
             }];
             
         }
-        
     }
-    
 }
-
-
-
 
 @end

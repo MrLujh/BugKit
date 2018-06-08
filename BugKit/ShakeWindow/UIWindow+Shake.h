@@ -1,13 +1,13 @@
 //
-//  BugKitShakeWindow.h
+//  UIWindow+Shake.h
 //  BugKitExample
 //
-//  Created by lujh on 2018/3/20.
+//  Created by lujh on 2018/6/8.
 //  Copyright © 2018年 lujh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BugKitShakeWindow : UIWindow
+@interface UIWindow (Shake)
 
 @end

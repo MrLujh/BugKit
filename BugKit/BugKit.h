@@ -8,7 +8,8 @@
 
 #ifndef BugKit_h
 #define BugKit_h
-#import "BugKitShakeWindow.h"
+#import "UIWindow+Shake.h"
+#import "BugKitAPMWindow.h"
 #import "BugKitListTableViewController.h"
 #import "BugKitSwitchBaseUrlController.h"
 #import "BugKitAppDownloadController.h"

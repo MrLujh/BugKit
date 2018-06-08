@@ -41,8 +41,6 @@
         self.apmWindow =   [[class1 alloc] initWithFrame:CGRectMake(0, 200, 60, 60)];
     });
     
-    Class class = NSClassFromString(@"BugKitShakeWindow");
-    self.window = [[class alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // 项目基础API配置设置
     [BugKitBaseUrlManager registerNetWorkBaseNetInfo:@[@{

@@ -23,14 +23,14 @@
      *  打开数据库（地区表）
      */
     
+    // 设置根控制器
+    [self selectRootController];
+    
     // 第三方服务初始化
     [self initThirdService];
     
     // 摇一摇初始化Window
     [self initShakeWindow];
-    
-    // 设置根控制器
-    [self selectRootController];
 
     return YES;
 }
@@ -39,7 +39,7 @@
 
 - (void)selectRootController
 {
-
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     TLTabBarViewController *tabBarVC = [[TLTabBarViewController alloc]init];
     self.window.rootViewController = tabBarVC;
     

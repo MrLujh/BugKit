@@ -15,20 +15,7 @@
 #define MENU_BACKGROUND_VIEW_TAG 6200
 
 @interface BugKitAPMView()
-/** 线程 */
-@property (nonatomic,strong) NSThread *thread;
-/** 定时器 */
-@property (nonatomic,strong) NSTimer *timer;
-/** 内存label */
-@property (nonatomic,strong) UILabel *memLab;
-/** CPUlabel */
-@property (nonatomic,strong) UILabel *cpuLab;
-/** 刷新频率label */
-@property (nonatomic,strong) UILabel *fpsLab;
-/* */
-@property (nonatomic, assign) NSTimeInterval lastUpdateTime;
-/* */
-@property (assign, nonatomic) NSInteger count;
+
 
 @end
 
@@ -42,8 +29,27 @@
         // 初始化Subviews
         [self setupSubviewsWithFrame:frame];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopAPMWindowTimerNotification:) name:@"kStopAPMWindowTimerNotification" object:nil];
     }
     return self;
+}
+
+- (void)stopAPMWindowTimerNotification:(NSNotification*)notification
+{
+    NSString *isShow = notification.userInfo[@"isShow"];
+    
+    if ([isShow isEqualToString:@"0"]) {
+        // 隐藏
+        if (self.timer) {
+            [self.timer invalidate];
+            self.timer = nil;
+        }
+    }else {
+       // 显示
+        [self startMemoryOverFlowMonitor];
+        
+        [self getFPS];
+    }
 }
 
 #pragma mark -初始化Subviews
@@ -85,10 +91,6 @@
     self.fpsLab.layer.cornerRadius = self.fpsLab.frame.size.height / 2.0;
     self.fpsLab.layer.masksToBounds = YES;
     [self addSubview:self.fpsLab];
-    
-    [self startMemoryOverFlowMonitor];
-    
-    [self getFPS];
 }
 
 -(void)startMemoryOverFlowMonitor
@@ -110,6 +112,8 @@
 
 -(void)getBtnData{
     //@[@"FPS",@"CPU",@"APP-CPU",@"Memory",@"APP-Mem"
+    
+    NSLog(@"getBtnData");
     dispatch_async(dispatch_get_main_queue(), ^{
         self.cpuLab.text = [self getAPPCPU];
         self.memLab.text = [self getAPPMem];
@@ -165,6 +169,11 @@
         _lastUpdateTime = link.timestamp;
         _count = 0;
     }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

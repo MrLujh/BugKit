@@ -99,7 +99,7 @@
 -(void)missVC{
     [[TYSystemMonitor sharedInstance] stop];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"DistroySubVC" object:nil];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"kStopAPMWindowTimerNSNotification" object:nil];
     
     [self dismissViewControllerAnimated:YES completion:^{
     }];

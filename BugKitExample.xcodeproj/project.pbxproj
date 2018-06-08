@@ -38,8 +38,6 @@
 		2E1E0C7D20C7C1F3003373F5 /* TYCPUUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5420C7C1F3003373F5 /* TYCPUUsage.m */; };
 		2E1E0C7E20C7C1F3003373F5 /* BugKitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5820C7C1F3003373F5 /* BugKitListTableViewController.m */; };
 		2E1E0C7F20C7C1F3003373F5 /* BugKitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5820C7C1F3003373F5 /* BugKitListTableViewController.m */; };
-		2E1E0C8020C7C1F3003373F5 /* BugKitShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5920C7C1F3003373F5 /* BugKitShakeWindow.m */; };
-		2E1E0C8120C7C1F3003373F5 /* BugKitShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5920C7C1F3003373F5 /* BugKitShakeWindow.m */; };
 		2E1E0C8220C7C1F3003373F5 /* BugKitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5F20C7C1F3003373F5 /* BugKitDataModel.m */; };
 		2E1E0C8320C7C1F3003373F5 /* BugKitDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C5F20C7C1F3003373F5 /* BugKitDataModel.m */; };
 		2E1E0C8420C7C1F3003373F5 /* BugKitSwitchBaseUrlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E0C6020C7C1F3003373F5 /* BugKitSwitchBaseUrlController.m */; };
@@ -50,6 +48,8 @@
 		2E1E105D20C90E68003373F5 /* BugKitAPMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E105B20C90E68003373F5 /* BugKitAPMView.m */; };
 		2E1E106020C9198E003373F5 /* BugKitAPMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E105F20C9198E003373F5 /* BugKitAPMWindow.m */; };
 		2E1E106120C9198E003373F5 /* BugKitAPMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E105F20C9198E003373F5 /* BugKitAPMWindow.m */; };
+		2E1E106C20CA4E83003373F5 /* UIWindow+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E106B20CA4E83003373F5 /* UIWindow+Shake.m */; };
+		2E1E106D20CA4E83003373F5 /* UIWindow+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E106B20CA4E83003373F5 /* UIWindow+Shake.m */; };
 		2E2E3FEA20C5161B0051EC44 /* AppDelegate+BugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E3FE920C5161B0051EC44 /* AppDelegate+BugKit.m */; };
 		2E2E3FEB20C5161B0051EC44 /* AppDelegate+BugKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E3FE920C5161B0051EC44 /* AppDelegate+BugKit.m */; };
 		2E4521C72060EA6500A6C71D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4521C52060EA6500A6C71D /* Main.storyboard */; };
@@ -120,9 +120,7 @@
 		2E1E0C5220C7C1F3003373F5 /* BugKitSystemStateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitSystemStateView.h; sourceTree = "<group>"; };
 		2E1E0C5320C7C1F3003373F5 /* BugKitSystemStateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitSystemStateViewController.h; sourceTree = "<group>"; };
 		2E1E0C5420C7C1F3003373F5 /* TYCPUUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYCPUUsage.m; sourceTree = "<group>"; };
-		2E1E0C5620C7C1F3003373F5 /* BugKitShakeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitShakeWindow.h; sourceTree = "<group>"; };
 		2E1E0C5820C7C1F3003373F5 /* BugKitListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugKitListTableViewController.m; sourceTree = "<group>"; };
-		2E1E0C5920C7C1F3003373F5 /* BugKitShakeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BugKitShakeWindow.m; sourceTree = "<group>"; };
 		2E1E0C5A20C7C1F3003373F5 /* BugKitListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitListTableViewController.h; sourceTree = "<group>"; };
 		2E1E0C5C20C7C1F3003373F5 /* BugKitDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitDataModel.h; sourceTree = "<group>"; };
 		2E1E0C5D20C7C1F3003373F5 /* BugKitBaseUrlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BugKitBaseUrlManager.h; sourceTree = "<group>"; };
@@ -135,6 +133,8 @@
 		2E1E105B20C90E68003373F5 /* BugKitAPMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitAPMView.m; sourceTree = "<group>"; };
 		2E1E105E20C9198E003373F5 /* BugKitAPMWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKitAPMWindow.h; sourceTree = "<group>"; };
 		2E1E105F20C9198E003373F5 /* BugKitAPMWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BugKitAPMWindow.m; sourceTree = "<group>"; };
+		2E1E106A20CA4E83003373F5 /* UIWindow+Shake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Shake.h"; sourceTree = "<group>"; };
+		2E1E106B20CA4E83003373F5 /* UIWindow+Shake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Shake.m"; sourceTree = "<group>"; };
 		2E2E3FE820C5161B0051EC44 /* AppDelegate+BugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BugKit.h"; sourceTree = "<group>"; };
 		2E2E3FE920C5161B0051EC44 /* AppDelegate+BugKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BugKit.m"; sourceTree = "<group>"; };
 		2E4521BC2060EA6500A6C71D /* BugKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,10 +272,10 @@
 				2E1E105B20C90E68003373F5 /* BugKitAPMView.m */,
 				2E1E105E20C9198E003373F5 /* BugKitAPMWindow.h */,
 				2E1E105F20C9198E003373F5 /* BugKitAPMWindow.m */,
-				2E1E0C5620C7C1F3003373F5 /* BugKitShakeWindow.h */,
-				2E1E0C5920C7C1F3003373F5 /* BugKitShakeWindow.m */,
 				2E1E0C5A20C7C1F3003373F5 /* BugKitListTableViewController.h */,
 				2E1E0C5820C7C1F3003373F5 /* BugKitListTableViewController.m */,
+				2E1E106A20CA4E83003373F5 /* UIWindow+Shake.h */,
+				2E1E106B20CA4E83003373F5 /* UIWindow+Shake.m */,
 			);
 			path = ShakeWindow;
 			sourceTree = "<group>";
@@ -621,6 +621,7 @@
 			files = (
 				2E1E0C8620C7C1F3003373F5 /* BugKitBaseUrlManager.m in Sources */,
 				2E4522122060EB1D00A6C71D /* TestVC.m in Sources */,
+				2E1E106C20CA4E83003373F5 /* UIWindow+Shake.m in Sources */,
 				2E1E0C7620C7C1F3003373F5 /* TYNetworkFlow.m in Sources */,
 				2E1E0C7A20C7C1F3003373F5 /* TYDeviceInfo.m in Sources */,
 				2E4522152060EB1D00A6C71D /* AppDelegate.m in Sources */,
@@ -636,7 +637,6 @@
 				2E1E0C6220C7C1F3003373F5 /* BugKitLogInfoViewController.m in Sources */,
 				2E1E0C7C20C7C1F3003373F5 /* TYCPUUsage.m in Sources */,
 				2E4526A8206898CD00A6C71D /* LujhBaseUrlManager.m in Sources */,
-				2E1E0C8020C7C1F3003373F5 /* BugKitShakeWindow.m in Sources */,
 				2E1E0C6820C7C1F3003373F5 /* TYDiskUsage.m in Sources */,
 				2E1E0C7220C7C1F3003373F5 /* TYFPSLabel.m in Sources */,
 				2E1E106020C9198E003373F5 /* BugKitAPMWindow.m in Sources */,
@@ -662,6 +662,7 @@
 			files = (
 				2E1E0C8720C7C1F3003373F5 /* BugKitBaseUrlManager.m in Sources */,
 				2E45271C2068A65300A6C71D /* TestVC.m in Sources */,
+				2E1E106D20CA4E83003373F5 /* UIWindow+Shake.m in Sources */,
 				2E1E0C7720C7C1F3003373F5 /* TYNetworkFlow.m in Sources */,
 				2E1E0C7B20C7C1F3003373F5 /* TYDeviceInfo.m in Sources */,
 				2E2E3FEB20C5161B0051EC44 /* AppDelegate+BugKit.m in Sources */,
@@ -677,7 +678,6 @@
 				2E1E0C6320C7C1F3003373F5 /* BugKitLogInfoViewController.m in Sources */,
 				2E1E0C7D20C7C1F3003373F5 /* TYCPUUsage.m in Sources */,
 				2E4527212068A65300A6C71D /* LujhBaseUrlManager.m in Sources */,
-				2E1E0C8120C7C1F3003373F5 /* BugKitShakeWindow.m in Sources */,
 				2E1E0C6920C7C1F3003373F5 /* TYDiskUsage.m in Sources */,
 				2E1E0C7320C7C1F3003373F5 /* TYFPSLabel.m in Sources */,
 				2E1E106120C9198E003373F5 /* BugKitAPMWindow.m in Sources */,
