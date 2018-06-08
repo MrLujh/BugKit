@@ -29,7 +29,7 @@
         [self setupSubviews];
         
         // 摇一摇通知
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidenAndShowAPMWindow) name:@"ShakeKeyWindow" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidenAndShowAPMWindow) name:@"kShowAPMWindowNotification" object:nil];
     }
     return self;
 }

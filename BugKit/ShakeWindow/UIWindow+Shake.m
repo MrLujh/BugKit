@@ -16,23 +16,11 @@
     if (motion == UIEventSubtypeMotionShake)
     {
         
-        NSString *stre = [[NSUserDefaults standardUserDefaults] objectForKey:@"count"];
-        if ([stre isEqualToString:@"1"]) {
-            // 隐藏
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"kDismissListVCNotification" object:nil];
-            [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"count"];
-        }else {
-            
-            // 显示
-            BugKitListTableViewController *vc = [[BugKitListTableViewController alloc] init];
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-            [self.rootViewController presentViewController:nav animated:YES completion:nil];
-            
-            [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"count"];
-        }
+        BugKitListTableViewController *vc = [[BugKitListTableViewController alloc] init];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self.rootViewController presentViewController:nav animated:YES completion:nil];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ShakeKeyWindow" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kShowAPMWindowNotification" object:nil userInfo:nil];
     }
 }
 

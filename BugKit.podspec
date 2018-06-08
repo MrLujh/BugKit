@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = 'BugKit'
-s.version     = '4.0.0'
+s.version     = '4.1.0'
 s.authors     = { 'MrLujh' => '287929070@qq.com' }
 s.homepage    = 'https://github.com/MrLujh/BugKit'
 s.summary     = 'Very useful built-in tools'
