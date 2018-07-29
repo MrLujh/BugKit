@@ -128,4 +128,3 @@ rm ~/Library/Caches/CocoaPods/search_index.json
 
 ## 这里写的有点不是很详细，，，，，下载项目，里面有示例可以作为参考
 
-![Mou icon](https://github.com/MrLujh/Fastlane--Packaging/blob/master/111.gif)
